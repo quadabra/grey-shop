@@ -1,0 +1,370 @@
+/* variables */
+/* bg colors */
+/* font colors */
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 57px 0 0 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7f9; }
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.back {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer; }
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+/* mdc */
+/**
+ * The css property used for elevation. In most cases this should not be changed. It is exposed
+ * as a variable for abstraction / easy use when needing to reference the property directly, for
+ * example in a `will-change` rule.
+ */
+/**
+ * The default duration value for elevation transitions.
+ */
+/**
+ * The default easing value for elevation transitions.
+ */
+/**
+ * Applies the correct CSS rules to an element to give it the elevation specified by $z-value.
+ * The $z-value must be between 0 and 24.
+ * If $color has an alpha channel, it will be ignored and overridden. To increase the opacity of the shadow, use
+ * $opacity-boost.
+ */
+/**
+ * Returns a string that can be used as the value for a `transition` property for elevation.
+ * Calling this function directly is useful in situations where a component needs to transition
+ * more than one property.
+ *
+ * ```scss
+ * .foo {
+ *   transition: mdc-elevation-transition-value(), opacity 100ms ease;
+ *   will-change: $mdc-elevation-property, opacity;
+ * }
+ * ```
+ */
+/* block */
+.page-header {
+  background-image: linear-gradient(rgba(33, 33, 33, 0.85), rgba(66, 66, 66, 0.65)); }
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  transform: scale(0.9);
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.95; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #FFF;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*
+   * Emphatic
+   */
+.hamburger {
+  overflow: hidden; }
+  .hamburger .hamburger-inner {
+    transition: background-color 0.125s 0.175s ease-in; }
+    .hamburger .hamburger-inner::before {
+      left: 0;
+      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in; }
+    .hamburger .hamburger-inner::after {
+      top: 10px;
+      right: 0;
+      transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in; }
+  .hamburger.hamburger_active .hamburger-inner {
+    transition-delay: 0s;
+    transition-timing-function: ease-out;
+    background-color: transparent; }
+    .hamburger.hamburger_active .hamburger-inner::before {
+      left: -80px;
+      top: -80px;
+      transform: translate3d(80px, 80px, 0) rotate(45deg);
+      transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
+    .hamburger.hamburger_active .hamburger-inner::after {
+      right: -80px;
+      top: -80px;
+      transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+      transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+.video {
+  margin: 0 auto;
+  width: 90%;
+  height: 20vw;
+  background-color: rgba(66, 66, 66, 0.65); }
+
+@media (min-width: 460px) {
+  .header-navigation {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row; }
+  .main-nav {
+    display: flex;
+    flex-direction: row; }
+    .main-nav__link {
+      display: block;
+      position: relative;
+      padding: 0 10px;
+      line-height: 45px;
+      font-weight: 500;
+      transition-duration: 0.3s; }
+      .main-nav__link::before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 2px;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        transition-duration: 0.3s;
+        background-color: transparent; }
+      .main-nav__link:hover {
+        color: antiquewhite; }
+        .main-nav__link:hover::before {
+          background-color: #ffffff; }
+    .main-nav__item {
+      position: relative; }
+  .user-nav {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row; }
+    .user-nav__link {
+      display: block;
+      position: relative;
+      padding: 0 10px;
+      line-height: 45px;
+      font-weight: 500;
+      transition-duration: 0.3s; }
+      .user-nav__link::before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 2px;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        transition-duration: 0.3s;
+        background-color: transparent; }
+      .user-nav__link:hover {
+        color: antiquewhite; }
+        .user-nav__link:hover::before {
+          background-color: #ffffff; }
+  .hamburger {
+    display: none; }
+  .category-card-list {
+    width: 100%;
+    left: 0;
+    display: none;
+    flex-direction: row;
+    margin: 0 auto;
+    background-color: rgba(66, 66, 66, 0.65);
+    transition-duration: 0.3s; }
+    .category-card-list__link {
+      display: block;
+      position: relative;
+      padding: 0 10px;
+      line-height: 45px;
+      font-weight: 500;
+      transition-duration: 0.3s; }
+      .category-card-list__link::before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 2px;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        transition-duration: 0.3s;
+        background-color: transparent; }
+      .category-card-list__link:hover {
+        color: antiquewhite; }
+        .category-card-list__link:hover::before {
+          background-color: #ffffff; }
+    .category-card-list__card {
+      margin: 0 50px 10px 10px;
+      padding-right: 20px; }
+      .category-card-list__card:not(:last-child) {
+        border-right: 1px solid white; }
+    .category-card-list__container {
+      display: flex;
+      flex-direction: row; }
+    .category-card-list__image {
+      outline: 1px solid white; } }
+
+@media (max-width: 460px) {
+  .page-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+    background-color: rgba(33, 33, 33, 0.85); }
+    .page-header__logo {
+      margin: 0 auto; }
+      .page-header__logo > img {
+        width: 120px; }
+  .header-navigation {
+    margin: 0 auto;
+    padding: 0 2.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .main-nav {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    height: auto;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    background-color: rgba(33, 33, 33, 0.85);
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    transition-duration: 0.3s; }
+    .main-nav__link {
+      display: block;
+      position: relative;
+      padding: 0 10px;
+      line-height: 45px;
+      font-weight: 500;
+      transition-duration: 0.3s; }
+      .main-nav__link::before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 2px;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        transition-duration: 0.3s;
+        background-color: transparent; }
+      .main-nav__link:hover {
+        color: antiquewhite; }
+        .main-nav__link:hover::before {
+          background-color: #ffffff; }
+  .user-nav {
+    margin-left: auto;
+    height: 58px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .user-nav__link {
+      padding: 5px; }
+  .menu-hidden {
+    display: none;
+    height: 0;
+    transition-duration: 0.3s; } }
+
+@media (max-width: 459px) {
+  .menu-contents {
+    margin: 0; }
+  .category-card-list {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(33, 33, 33, 0.85); }
+    .category-card-list__link {
+      display: block;
+      line-height: 30px;
+      font-weight: 500;
+      transition-duration: 0.3s; }
+      .category-card-list__link:hover, .category-card-list__link:focus {
+        color: antiquewhite; }
+      .category-card-list__link:active {
+        color: #039be5; }
+    .category-card-list__card {
+      padding: 10px; }
+      .category-card-list__card:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+    .category-card-list__container {
+      display: flex;
+      flex-direction: row;
+      width: 95%;
+      margin: 0 auto; }
+    .category-card-list__image {
+      outline: 1px solid white;
+      width: 50%;
+      height: auto; }
+    .category-card-list__title {
+      margin: 0;
+      padding: 15px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+    .category-card-list__link {
+      padding: 0 30px; }
+    .category-card-list__item-list {
+      width: 50%;
+      overflow: hidden; }
+  .menu-contents__section_camo {
+    display: none; }
+  .section-show {
+    display: block; } }
