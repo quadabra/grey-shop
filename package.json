@@ -1,0 +1,36 @@
+{
+  "name": "e-shop",
+  "version": "4.0.0",
+  "private": true,
+  "description": "e-shop",
+  "scripts": {
+    "eslint": "eslint js/",
+    "build": "gulp build",
+    "start": "gulp serve",
+    "test": "npm run eslint && gulp test"
+  },
+  "devDependencies": {
+    "autoprefixer": "6.7.7",
+    "browser-sync": "2.18.8",
+    "css-mqpacker": "6.0.0",
+    "del": "2.2.2",
+    "eslint": "4.2.0",
+    "eslint-config-htmlacademy": "0.4.x",
+    "gulp": "3.9.1",
+    "gulp-csso": "3.0.0",
+    "gulp-imagemin": "3.2.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "7.0.0",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "3.1.0",
+    "jasmine": "^3.1.0",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
+  },
+  "engines": {
+    "node": "6.11.3"
+  },
+  "dependencies": {
+    "material-components-web": "^0.34.1"
+  }
+}

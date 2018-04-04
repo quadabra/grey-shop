@@ -1,0 +1,31 @@
+@mixin flex  {
+  display: flex;
+  flex-direction: row;
+}
+@mixin link-hover {
+  &__link {
+    display: block;
+    position: relative;
+    padding: 0 10px;
+    line-height: 45px;
+    font-weight: 500;
+    transition-duration: 0.3s;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 2px;
+      bottom: 0;
+      left: 10px;
+      right: 10px;
+      transition-duration: 0.3s;
+      background-color: transparent;
+    }
+    &:hover {
+      color: antiquewhite;
+      &::before {
+        background-color: $font-color-main;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+//@media (max-width: 459px) {
+  .header-navigation {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 2.5%;
+    @include flex;
+  }
+
+  .main-nav {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    padding-bottom: 10px;
+    background-color: $bg-color-gray__transparent;
+    z-index: 2;
+    @include flex;
+    flex-direction: column;
+    @include link-hover;
+    &__link:hover ~ ul {
+      display: flex;
+    }
+  }
+
+  .user-nav {
+    margin-left: auto;
+    @include flex;
+    @include link-hover;
+  }
+
+  .menu-hidden {
+    display: none;
+  }
+//}
+
+@media (min-width: 460px) {
+  .header-navigation {
+    margin: 0 auto;
+    width: 90%;
+    @include flex;
+  }
+
+  .main-nav {
+    @include flex;
+    @include link-hover;
+    &__item {
+      position: relative;
+    }
+  }
+
+  .user-nav {
+    margin-left: auto;
+    @include flex;
+    @include link-hover;
+  }
+}
