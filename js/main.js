@@ -1,10 +1,11 @@
-const sandwich = document.querySelector(`.sandwich`);
+const hamburger = document.querySelector(`.hamburger`);
 const menu = document.querySelector(`.main-nav`);
 menu.classList.add(`menu-hidden`);
 
-sandwich.addEventListener(`click`, function (evt) {
+hamburger.addEventListener(`click`, function (evt) {
   evt.preventDefault();
   menu.classList.toggle(`menu-hidden`);
+  hamburger.classList.toggle(`hamburger_active`);
 });
 
 const camoBtn = document.querySelector(`.main-nav__link_camo`);

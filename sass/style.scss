@@ -1,11 +1,16 @@
 /* variables */
 @import "variables";
-@import "global";
 @import "mixins";
+@import "keyframes";
+@import "global";
+
+/* mdc */
+@import "./@material/elevation/mixins";
+
 /* block */
 @import "./blocks/header";
 @import "./blocks/navigation";
-@import "./blocks/sandwich";
+@import "blocks/hamburger";
 @import "./blocks/video";
 @import "./blocks/menu-contents";
 
