@@ -264,11 +264,9 @@ ul {
     z-index: 10;
     background-color: rgba(33, 33, 33, 0.85); }
     .page-header__logo {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%); }
+      margin: 0 auto; }
       .page-header__logo > img {
-        width: 80px; }
+        width: 120px; }
   .header-navigation {
     margin: 0 auto;
     padding: 0 2.5%;
