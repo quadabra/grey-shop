@@ -7,9 +7,11 @@
     z-index: 10;
     background-color: $bg-color-gray__transparent;
     &__logo {
-      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       & > img {
-        width: 120px;
+        width: 80px;
       }
     }
   }
