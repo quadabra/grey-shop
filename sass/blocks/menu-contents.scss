@@ -51,14 +51,12 @@
 
 @media (min-width: 460px) {
   .menu-contents {
+    position: relative;
     @include flex;
     @include mdc-elevation(2);
-    padding: 10px 0 20px 0;
     width: 100%;
     background-color: $bg-color-gray__transparent;
     justify-content: space-around;
-    transition-duration: 0.3s;
-    display: none;
     &__section {
       width: 80%;
     }
@@ -67,7 +65,7 @@
   .category-card-list {
     display: flex;
     flex-direction: row;
-    margin: 0 auto;
+    margin: 10px auto 20px auto;
 
     @include link-hover_underline;
     transition-duration: 0.3s;
@@ -75,7 +73,7 @@
       width: 25%;
       padding: 0 20px;
       &:not(:last-child) {
-        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
       }
     }
     &__container {
@@ -84,7 +82,7 @@
       margin: 0 auto;
     }
     &__image {
-      outline: 1px solid white;
+      outline: 1px solid rgba(255, 255, 255, 0.5);
       max-width: 50%;
       max-height: 200px;
     }
