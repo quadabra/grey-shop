@@ -56,13 +56,32 @@
 }
 
 @media (min-width: 460px) {
+  .page-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    @include mdc-elevation(4);
+    z-index: 10;
+    background-color: $bg-color-gray__transparent;
+    &__logo {
+      & > img {
+        position: absolute;
+        width: 250px;
+        top: 5px;
+        filter: drop-shadow(2px 4px 6px rgba(44, 44, 44, 0.55));
+      }
+    }
+  }
+
   .header-navigation {
     margin: 0 auto;
     width: 90%;
     @include flex;
+    align-items: center;
   }
 
   .main-nav {
+    margin-left: 270px;
     @include flex;
     @include link-hover_underline;
     &__item {
@@ -73,6 +92,10 @@
   .user-nav {
     margin-left: auto;
     @include flex;
-    @include link-hover_underline;
+    @include link-hover_color;
+    align-items: center;
+    &__link {
+      padding: 7px 10px 0 10px;
+    }
   }
 }

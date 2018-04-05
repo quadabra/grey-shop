@@ -50,30 +50,64 @@
 }
 
 @media (min-width: 460px) {
-  .shop {
+  .menu-contents {
+    @include flex;
+    @include mdc-elevation(2);
+    padding: 10px 0 20px 0;
+    width: 100%;
+    background-color: $bg-color-gray__transparent;
+    justify-content: space-around;
+    transition-duration: 0.3s;
+    display: none;
+    &__section {
+      width: 80%;
+    }
   }
 
   .category-card-list {
-    width: 100%;
-    left: 0;
-    display: none;
+    display: flex;
     flex-direction: row;
     margin: 0 auto;
-    background-color: $bg-color-light-gray__transparent;
+
     @include link-hover_underline;
     transition-duration: 0.3s;
     &__card {
-      margin: 0 50px 10px 10px;
-      padding-right: 20px;
+      width: 25%;
+      padding: 0 20px;
       &:not(:last-child) {
-        border-right: 1px solid white;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
       }
     }
     &__container {
       @include flex;
+      width: 100%;
+      margin: 0 auto;
     }
     &__image {
       outline: 1px solid white;
+      max-width: 50%;
+      max-height: 200px;
     }
+    &__title {
+      margin: 0;
+      padding: 15px 0;
+      @include flex;
+      justify-content: space-around;
+    }
+    &__link {
+      padding: 0 30px;
+    }
+    &__item-list {
+      margin: 0;
+      width: 25%;
+      overflow: hidden;
+    }
+  }
+
+  .menu-contents__section_camo {
+    display: none;
+  }
+  .section-show {
+    display: block;
   }
 }
