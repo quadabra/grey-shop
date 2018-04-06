@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  padding: 57px 0 0 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
   background-color: #f5f7f9; }
 
@@ -76,8 +76,7 @@ ul {
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  transform: scale(0.9);
-  padding: 15px 15px;
+  padding: 9px 10px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -88,7 +87,7 @@ ul {
   text-transform: none;
   background-color: transparent;
   border: 0;
-  margin: 0;
+  margin: 4px 0 0 0;
   overflow: visible; }
   .hamburger:hover {
     opacity: 0.95; }
@@ -156,29 +155,28 @@ ul {
   background-color: rgba(66, 66, 66, 0.65); }
 
 @media (min-width: 460px) {
-    body {
-      padding-top: 50px; }
   .page-header {
     position: fixed;
     width: 100%;
     top: 0;
+    height: 50px;
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     z-index: 10;
     background-color: rgba(33, 33, 33, 0.85);
     background-image: linear-gradient(rgba(33, 33, 33, 0.85), rgba(66, 66, 66, 0.65)); }
     .page-header__logo > img {
-      position: absolute;
       width: 275px;
-      top: 3px;
+      margin-top: 23px;
       filter: drop-shadow(2px 2px 6px rgba(44, 44, 44, 0.45)); }
   .header-navigation {
     margin: 0 auto;
+    height: 50px;
     width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center; }
   .main-nav {
-    margin-left: 275px;
+    margin-left: 25px;
     display: flex;
     flex-direction: row; }
     .main-nav__link {
@@ -186,8 +184,9 @@ ul {
       position: relative;
       padding: 0 20px;
       line-height: 50px;
-      font-weight: 700;
-      font-size: 18px;
+      font-weight: 900;
+      font-size: 16px;
+      text-transform: uppercase;
       transition-duration: 0.3s; }
       .main-nav__link::before {
         content: '';
@@ -228,10 +227,15 @@ ul {
       margin-right: 100px; }
       .user-nav__link_contacts > img {
         margin-right: 5px; }
+      .user-nav__link_contacts > span {
+        font-size: 16px;
+        font-weight: 900;
+        text-transform: uppercase; }
   .hamburger {
     display: none; }
   .menu-contents {
-    position: relative;
+    position: absolute;
+    z-index: -1;
     display: flex;
     flex-direction: row;
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
@@ -250,8 +254,9 @@ ul {
       position: relative;
       padding: 0 20px;
       line-height: 50px;
-      font-weight: 700;
-      font-size: 18px;
+      font-weight: 900;
+      font-size: 16px;
+      text-transform: uppercase;
       transition-duration: 0.3s; }
       .category-card-list__link::before {
         content: '';
@@ -309,13 +314,19 @@ ul {
     grid-gap: 2vw; }
   .promo-item {
     height: 30vw;
-    background-color: rgba(33, 33, 33, 0.85); } }
+    background-color: rgba(33, 33, 33, 0.85); }
+  .btn-options {
+    display: none; } }
 
 @media (max-width: 460px) {
   .page-header {
     position: fixed;
     width: 100%;
+    height: 50px;
     top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
     z-index: 10;
     background-color: rgba(33, 33, 33, 0.85);
@@ -323,7 +334,7 @@ ul {
     .page-header__logo {
       margin: 0 auto; }
       .page-header__logo > img {
-        width: 130px; }
+        width: 150px; }
   .header-navigation {
     margin: 0 auto;
     padding: 0 2.5%;
@@ -350,8 +361,9 @@ ul {
       position: relative;
       padding: 0 20px;
       line-height: 50px;
-      font-weight: 700;
-      font-size: 18px;
+      font-weight: 900;
+      font-size: 16px;
+      text-transform: uppercase;
       transition-duration: 0.3s; }
       .main-nav__link::before {
         content: '';
@@ -368,11 +380,17 @@ ul {
         .main-nav__link:hover::before {
           background-color: #ffffff; }
   .user-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
     margin-left: auto;
-    height: 50px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center; }
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: rgba(33, 33, 33, 0.85); }
     .user-nav__link {
       padding: 0 3px;
       display: flex;
@@ -382,16 +400,25 @@ ul {
       margin-right: 0; }
       .user-nav__link_contacts > img {
         margin-right: 5px; }
-      .user-nav__link_contacts > span {
-        display: none; }
   .menu-hidden {
     display: none;
     height: 0;
-    transition-duration: 0.3s; } }
+    transition-duration: 0.3s; }
+  .btn-options {
+    box-sizing: content-box;
+    padding: 5px;
+    height: 36px;
+    width: 36px;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/ic_more_vert_white_36px.svg");
+    background-repeat: no-repeat;
+    background-position: center center; } }
 
 @media (max-width: 459px) {
   .menu-contents {
-    margin: 0; }
+    margin: 0;
+    overflow: scroll; }
   .category-card-list {
     margin: 0;
     padding: 0;
@@ -416,9 +443,14 @@ ul {
       flex-direction: row;
       width: 95%;
       margin: 0 auto; }
-    .category-card-list__image {
-      outline: 1px solid white;
+    .category-card-list__image-container {
       width: 50%;
+      max-height: 250px;
+      overflow: hidden; }
+    .category-card-list__image {
+      display: block;
+      outline: 1px solid white;
+      width: 100%;
       height: auto; }
     .category-card-list__title {
       margin: 0;

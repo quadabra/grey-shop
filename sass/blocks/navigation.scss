@@ -16,10 +16,16 @@
   }
 
   .user-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
     margin-left: auto;
-    height: 50px;
+    width: 100%;
     @include flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: $bg-color-gray__transparent;
     &__link {
       padding: 0 3px;
       @include flex;
@@ -31,7 +37,7 @@
         margin-right: 5px;
       }
       & > span {
-        display: none;
+
       }
     }
   }
