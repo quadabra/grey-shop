@@ -1,6 +1,11 @@
 @media (max-width: 459px) {
 
   .menu-contents {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: 80vh;
+    z-index: 1;
     margin: 0;
     overflow: scroll;
   }
@@ -20,12 +25,13 @@
     }
     &__container {
       @include flex;
+      justify-content: space-between;
       width: 95%;
       margin: 0 auto;
     }
     &__image-container {
-      width: 50%;
-      max-height: 250px;
+      width: 45%;
+      max-height: 200px;
       overflow: hidden;
     }
     &__image {
@@ -44,7 +50,7 @@
       padding: 0 30px;
     }
     &__item-list {
-      width: 50%;
+      width: 55%;
       overflow: hidden;
     }
   }
@@ -58,8 +64,9 @@
 
 @media (min-width: 460px) {
   .menu-contents {
-    position: absolute;
-    z-index: -1;
+    position: fixed;
+    top: 50px;
+    z-index: 1;
     @include flex;
     @include mdc-elevation(2);
     width: 100%;
@@ -74,8 +81,7 @@
     display: flex;
     flex-direction: row;
     margin: 10px auto 20px auto;
-
-    @include link-hover_underline;
+    @include link-submenu;
     transition-duration: 0.3s;
     &__card {
       width: 25%;
@@ -89,10 +95,17 @@
       width: 100%;
       margin: 0 auto;
     }
+    &__image-container {
+      width: 45%;
+    }
+    &__item-list {
+      width: 55%;
+    }
     &__image {
       outline: 1px solid rgba(255, 255, 255, 0.5);
-      max-width: 50%;
-      max-height: 200px;
+      display: block;
+      width: 100%;
+      height: auto;
     }
     &__title {
       margin: 0;
@@ -102,11 +115,6 @@
     }
     &__link {
       padding: 0 30px;
-    }
-    &__item-list {
-      margin: 0;
-      width: 25%;
-      overflow: hidden;
     }
   }
 
