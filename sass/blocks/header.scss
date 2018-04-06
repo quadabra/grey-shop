@@ -29,6 +29,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+    height: 50px;
     @include mdc-elevation(4);
     z-index: 10;
     background-color: $bg-color-gray__transparent;
@@ -36,9 +37,8 @@
 
     &__logo {
       & > img {
-        position: absolute;
         width: 275px;
-        top: 3px;
+        margin-top: 23px;
         filter: drop-shadow(2px 2px 6px rgba(44, 44, 44, 0.45));
       }
     }
@@ -46,6 +46,7 @@
 
   .header-navigation {
     margin: 0 auto;
+    height: 50px;
     width: 90%;
     @include flex;
     align-items: center;

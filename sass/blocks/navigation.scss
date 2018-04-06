@@ -45,7 +45,7 @@
 
 @media (min-width: 460px) {
   .main-nav {
-    margin-left: 275px;
+    margin-left: 25px;
     @include flex;
     @include link-hover_underline;
     &__item {
@@ -69,7 +69,9 @@
         margin-right: 5px;
       }
       & > span {
-
+        font-size: 16px;
+        font-weight: 900;
+        text-transform: uppercase;
       }
     }
   }

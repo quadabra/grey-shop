@@ -51,7 +51,8 @@
 
 @media (min-width: 460px) {
   .menu-contents {
-    position: relative;
+    position: absolute;
+    z-index: -1;
     @include flex;
     @include mdc-elevation(2);
     width: 100%;
