@@ -2,18 +2,17 @@
   .page-header {
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: $header-height;
     top: 0;
-    @include flex;
-    align-items: center;
+    @include flex(row, flex-start, center, no-wrap);
     @include mdc-elevation(4);
     z-index: 10;
     background-color: $bg-color-gray__transparent;
     background-image: linear-gradient($bg-color-gray__transparent, $bg-color-light-gray__transparent);
     &__logo {
-      margin: 0 auto;
+      margin: 2px auto 0 0;
       & > img {
-        width: 150px;
+        width: 175px;
       }
     }
   }
@@ -22,8 +21,7 @@
     margin: 0 auto;
     padding: 0 2.5%;
     width: 100%;
-    @include flex;
-    align-items: center;
+    @include flex(row, flex-start, center, no-wrap);
   }
 }
 
@@ -32,7 +30,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    height: 50px;
+    height: $header-height;
     @include mdc-elevation(4);
     z-index: 10;
     background-color: $bg-color-gray__transparent;
@@ -49,9 +47,9 @@
 
   .header-navigation {
     margin: 0 auto;
-    height: 50px;
+    height: $header-height;
     width: 90%;
-    @include flex;
+    @include flex(row, flex-start, center, no-wrap);
     align-items: center;
   }
 }

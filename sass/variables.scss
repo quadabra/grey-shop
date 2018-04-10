@@ -8,5 +8,12 @@ $font-color-main: #ffffff;
 $font-color-light: #212121;
 $font-color-dark: #000000;
 
+/* borders */
+
+$border-white-transparent: 1px solid rgba(255, 255, 255, 0.3);
+
+/* sizes */
+$header-height: 50px;
+
 /* media query */
 $mobile-s-portrait: 420px;

@@ -1,78 +1,109 @@
-@mixin flex  {
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+@mixin font ($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin flex($direction, $justify, $align, $wrap) {
   display: flex;
-  flex-direction: row;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
 }
-@mixin link-hover_underline {
-  &__link {
+
+@mixin transition($duration, $function, $delay) {
+  transition-duration: $duration;
+  transition-timing-function: $function;
+  transition-delay: $delay;
+}
+
+@mixin grid-container($columns, $rows, $col_width, $row_height, $col_gap, $row_gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, $col_width);
+  grid-template-rows: repeat($rows, $row_height);
+  grid-column-gap: $col_gap;
+  grid-row-gap: $row_gap;
+}
+
+@mixin grid-element($col_start, $col_end, $row_start, $row_end) {
+  grid-column-start: $col_start;
+  grid-column-end: $col_end;
+  grid-row-start: $row_start;
+  grid-row-end: $row_end;
+}
+
+@mixin link($padding, $height, $transform, $underline, $text_color, $hover_color) {
+  display: block;
+  position: relative;
+  padding: 0 $padding;
+  line-height: $height;
+  color: $text_color;
+  text-transform: $transform;
+  cursor: pointer;
+  @include transition(0.3s, ease, 0);
+  &::before {
+    content: '';
+    position: absolute;
     display: block;
-    position: relative;
-    padding: 0 20px;
-    line-height: 50px;
-    font-weight: 900;
-    font-size: 16px;
-    text-transform: uppercase;
-    transition-duration: 0.3s;
+    height: $underline;
+    bottom: 0;
+    left: $padding;
+    right: $padding;
+    background-color: transparent;
+    @include transition(0.3s, ease, 0);
+  }
+  &:hover,
+  &:focus {
+    color: $hover_color;
     &::before {
-      content: '';
-      position: absolute;
-      display: block;
-      height: 2px;
-      bottom: 0;
-      left: 20px;
-      right: 20px;
-      transition-duration: 0.3s;
-      background-color: transparent;
+      background-color: $hover_color;
     }
-    &:hover {
-      color: antiquewhite;
-      &::before {
-        background-color: $font-color-main;
-      }
+  }
+  &:active {
+    opacity: 0.8;
+    &::before {
+      opacity: 0.8;
     }
   }
 }
 
-@mixin link-submenu {
-  &__link {
-    display: block;
-    position: relative;
-    padding: 0 20px;
-    line-height: 36px;
-    font-weight: 700;
-    font-size: 16px;
-    transition-duration: 0.3s;
-    &::before {
-      content: '';
-      position: absolute;
-      display: block;
-      height: 2px;
-      bottom: 0;
-      left: 20px;
-      right: 20px;
-      transition-duration: 0.3s;
-      background-color: transparent;
-    }
-    &:hover {
-      color: antiquewhite;
-      &::before {
-        background-color: $font-color-main;
-      }
-    }
-  }
+@mixin btn_reset {
+  border: none;
+  background: none;
+  border-radius: 0;
+  outline: none;
+  font-family: inherit;
 }
 
-@mixin link-hover_color {
-  &__link {
-    display: block;
-    line-height: 30px;
-    font-weight: 500;
-    transition-duration: 0.3s;
-    &:hover,
-    &:focus {
-      color: antiquewhite;
-    }
-    &:active {
-      color: #039be5;
-    }
+@mixin select($padding-l, $padding-r, $height, $width, $text_color, $border) {
+  display: block;
+  padding: 0 $padding-r 0 $padding-l;
+  width: $width;
+  height: $height;
+  border: none;
+  border-radius: 0;
+  color: $text_color;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-bottom: $border;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -ms-appearance: none;
+  appearance: none !important;
+  background-image: url("../img/ic_expand_more_black_24px.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  outline: none;
+  &::-ms-expand {
+    display: none;
   }
 }

@@ -21,6 +21,10 @@ ul {
   list-style: none;
 }
 
+h4 {
+  @include reset;
+}
+
 .back {
   border: 0;
   background-color: transparent;
