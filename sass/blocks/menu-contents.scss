@@ -1,11 +1,10 @@
 @media (max-width: 459px) {
 
   .menu-contents {
-    display: none;
     position: fixed;
     top: 50px;
     width: 100%;
-    height: calc(100vh - 50px);
+    max-height: calc(100vh - 50px);
     z-index: 1;
     margin: 0;
     overflow: scroll;
