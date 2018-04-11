@@ -1,0 +1,21 @@
+@media (max-width: 460px) {
+  .footer-category {
+    padding: 10px;
+    &__title {
+      @include font(13px, 700);
+    }
+    &__link {
+      @include font(12px, 400);
+    }
+    &__list {
+      @include flex(column, space-around, center, no-wrap);
+      &_social {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@media (min-width: 460px) {
+
+}
