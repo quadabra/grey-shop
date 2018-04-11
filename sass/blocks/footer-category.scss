@@ -15,9 +15,21 @@
       @include flex(column, space-around, flex-start, no-wrap);
       &_social {
         margin: 0 auto;
-        width: 70%;
+        width: 80%;
         @include flex(row, space-around, center, no-wrap);
       }
+    }
+    &__input {
+      background: transparent;
+      color: white;
+      @include font(12, 400);
+      border: none;
+      border-bottom: $border-white-transparent;
+      width: 50%;
+    }
+    &__btn {
+      @include btn_reset;
+      background-color: greenyellow;
     }
   }
 }

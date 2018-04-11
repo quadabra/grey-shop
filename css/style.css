@@ -509,14 +509,16 @@ h4 {
       grid-column-end: 7;
       -ms-grid-row: 3;
           grid-row-start: 3;
-      grid-row-end: 4; }
+      grid-row-end: 4;
+      margin: 0 auto; }
     .page-footer__logo {
       -ms-grid-column: 1;
           grid-column-start: 1;
       grid-column-end: 3;
       -ms-grid-row: 1;
           grid-row-start: 1;
-      grid-row-end: 3; }
+      grid-row-end: 3;
+      padding-left: 5px; }
     .page-footer__address {
       -ms-grid-column: 3;
           grid-column-start: 3;
@@ -565,12 +567,27 @@ h4 {
       flex-wrap: no-wrap; }
       .footer-category__list_social {
         margin: 0 auto;
-        width: 70%;
+        width: 80%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        flex-wrap: no-wrap; } }
+        flex-wrap: no-wrap; }
+    .footer-category__input {
+      background: transparent;
+      color: white;
+      font-size: 12;
+      font-weight: 400;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      width: 50%; }
+    .footer-category__btn {
+      border: none;
+      background: none;
+      border-radius: 0;
+      outline: none;
+      font-family: inherit;
+      background-color: greenyellow; } }
 
 @media (max-width: 459px) {
   .menu-contents {
