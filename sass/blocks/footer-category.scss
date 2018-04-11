@@ -6,11 +6,17 @@
     }
     &__link {
       @include font(12px, 400);
+      & > img {
+        width: 36px;
+        height: auto;
+      }
     }
     &__list {
-      @include flex(column, space-around, center, no-wrap);
+      @include flex(column, space-around, flex-start, no-wrap);
       &_social {
-        flex-direction: row;
+        margin: 0 auto;
+        width: 70%;
+        @include flex(row, space-around, center, no-wrap);
       }
     }
   }
