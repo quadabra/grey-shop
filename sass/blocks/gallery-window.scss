@@ -12,6 +12,14 @@
     }
   }
   .gallery-item {
+    &__title {
+      position: absolute;
+      top: 0;
+    }
+    &__text {
+      position: absolute;
+      top: 50px;
+    }
     &__images {
       width: 90%;
       overflow: hidden;
@@ -19,6 +27,11 @@
     &__image {
       width: 100%;
       height: auto;
+    }
+    &__button {
+      position: absolute;
+      bottom: 20%;
+      right: 10%;
     }
   }
 }

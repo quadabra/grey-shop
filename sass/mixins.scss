@@ -109,16 +109,16 @@
 }
 
 @mixin slider-button($outer_size, $inner_size, $color) {
+  @include btn_reset;
+  @include transition(0.3s, ease, 0);
   display: block;
   box-sizing: border-box;
   position: absolute;
-  @include btn_reset;
   width: $outer_size;
   height: $outer_size;
   border-radius: 50%;
   background-color: transparent;
   border: 2px solid transparent;
-  @include transition(0.3s, ease, 0);
   cursor: pointer;
   &:hover,
   &:focus {
@@ -143,5 +143,23 @@
   }
   &_right::before {
     transform: translateX(-65%) translateY(-50%) rotate(-45deg);
+  }
+}
+
+@mixin action-button($color, $hover_tx_color, $active_tx_color, $bg_color, $hover_bg_color, $active_bg_color, $x-padding, $height) {
+  outline: none;
+  display: block;
+  color: $color;
+  padding: 0 $x-padding;
+  line-height: $height;
+  background-color: $bg_color;
+  &:hover,
+  &:focus {
+    color: $hover_tx_color;
+    background-color: $hover_bg_color;
+  }
+  &:active {
+    color: $active_tx_color;
+    background-color: $active_bg_color;
   }
 }

@@ -4,13 +4,17 @@
     width: 100%;
     overflow: hidden;
     &__btn {
-      position: absolute;
-      top: 50%;
       &-left {
+        position: absolute;
+        top: 50%;
         left: 5%;
+        z-index: 9;
       }
       &-right {
+        position: absolute;
+        top: 50%;
         right: 5%;
+        z-index: 9;
       }
     }
     &__paginator {
@@ -19,6 +23,7 @@
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 9;
       &-btn {
         @include btn_reset;
         margin: 5px;
