@@ -340,19 +340,42 @@ h4 {
     display: none; }
   .section-show {
     display: block; }
-  .promo {
-    margin: 0 auto;
-    width: 90%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: (1fr)[1];
-        grid-template-rows: repeat(1, 1fr);
-    grid-gap: 2vw; }
-  .promo-item {
-    height: 30vw;
-    background-color: rgba(33, 33, 33, 0.85); } }
+  .slider-btn {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border: none;
+    background: none;
+    border-radius: 0;
+    outline: none;
+    font-family: inherit;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0;
+    cursor: pointer; }
+    .slider-btn:hover, .slider-btn:focus {
+      border: 2px solid rgba(33, 33, 33, 0.85); }
+    .slider-btn:active {
+      border: 2px solid rgba(33, 33, 33, 0.85);
+      opacity: 0.75; }
+    .slider-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 27px;
+      height: 27px;
+      border-bottom: 3px solid rgba(33, 33, 33, 0.85);
+      border-right: 3px solid rgba(33, 33, 33, 0.85); }
+    .slider-btn_left::before {
+      transform: translateX(-35%) translateY(-50%) rotate(135deg); }
+    .slider-btn_right::before {
+      transform: translateX(-65%) translateY(-50%) rotate(-45deg); } }
 
 @media (max-width: 460px) {
   .page-header {
@@ -490,6 +513,89 @@ h4 {
     display: none;
     height: 0;
     transition-duration: 0.3s; }
+  .slider-btn {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border: none;
+    background: none;
+    border-radius: 0;
+    outline: none;
+    font-family: inherit;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0;
+    cursor: pointer; }
+    .slider-btn:hover, .slider-btn:focus {
+      border: 2px solid rgba(33, 33, 33, 0.85); }
+    .slider-btn:active {
+      border: 2px solid rgba(33, 33, 33, 0.85);
+      opacity: 0.75; }
+    .slider-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 17px;
+      height: 17px;
+      border-bottom: 3px solid rgba(33, 33, 33, 0.85);
+      border-right: 3px solid rgba(33, 33, 33, 0.85); }
+    .slider-btn_left::before {
+      transform: translateX(-35%) translateY(-50%) rotate(135deg); }
+    .slider-btn_right::before {
+      transform: translateX(-65%) translateY(-50%) rotate(-45deg); }
+  .promo-gallery {
+    position: relative;
+    width: 100%;
+    overflow: hidden; }
+    .promo-gallery__btn {
+      position: absolute;
+      top: 50%; }
+      .promo-gallery__btn-left {
+        left: 5%; }
+      .promo-gallery__btn-right {
+        right: 5%; }
+    .promo-gallery__paginator {
+      display: flex;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%); }
+      .promo-gallery__paginator-btn {
+        border: none;
+        background: none;
+        border-radius: 0;
+        outline: none;
+        font-family: inherit;
+        margin: 5px;
+        width: 15px;
+        height: 15px;
+        border: 2px solid rgba(66, 66, 66, 0.65);
+        border-radius: 50%;
+        background-color: transparent;
+        opacity: 0.75; }
+        .promo-gallery__paginator-btn:hover, .promo-gallery__paginator-btn:focus {
+          background-color: rgba(66, 66, 66, 0.65); }
+  .gallery-window {
+    width: 100%;
+    position: relative; }
+    .gallery-window__images {
+      width: 90%;
+      overflow: hidden; }
+    .gallery-window__image {
+      width: 100%;
+      height: auto; }
+  .gallery-item__images {
+    width: 90%;
+    overflow: hidden; }
+  .gallery-item__image {
+    width: 100%;
+    height: auto; }
   .page-footer {
     padding-top: 30px;
     display: -ms-grid;
