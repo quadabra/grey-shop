@@ -107,3 +107,41 @@
     display: none;
   }
 }
+
+@mixin slider-button($outer_size, $inner_size, $color) {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  @include btn_reset;
+  width: $outer_size;
+  height: $outer_size;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid transparent;
+  @include transition(0.3s, ease, 0);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    border: 2px solid $color;
+  }
+  &:active {
+    border: 2px solid $color;
+    opacity: 0.75;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $inner_size;
+    height: $inner_size;
+    border-bottom: 3px solid $color;
+    border-right: 3px solid $color;
+  }
+  &_left::before {
+    transform: translateX(-35%) translateY(-50%) rotate(135deg);
+  }
+  &_right::before {
+    transform: translateX(-65%) translateY(-50%) rotate(-45deg);
+  }
+}

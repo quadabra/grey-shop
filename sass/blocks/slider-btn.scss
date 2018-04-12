@@ -1,0 +1,12 @@
+
+@media (max-width: 460px) {
+  .slider-btn {
+    @include slider-button(40px, 17px, $bg-color-gray__transparent);
+  }
+}
+
+@media (min-width: 460px) {
+  .slider-btn {
+    @include slider-button(60px, 27px, $bg-color-gray__transparent);
+  }
+}

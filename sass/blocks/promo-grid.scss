@@ -5,17 +5,5 @@
 }
 
 @media (min-width: 460px) {
-  .promo {
-    margin: 0 auto;
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-gap: 2vw;
-  }
-  .promo-item {
 
-    height: 30vw;
-    background-color: $bg-color-gray__transparent;
-  }
 }

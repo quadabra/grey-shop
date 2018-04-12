@@ -1,0 +1,42 @@
+@media (max-width: 460px) {
+  .promo-gallery {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    &__btn {
+      position: absolute;
+      top: 50%;
+      &-left {
+        left: 5%;
+      }
+      &-right {
+        right: 5%;
+      }
+    }
+    &__paginator {
+      display: flex;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      &-btn {
+        @include btn_reset;
+        margin: 5px;
+        width: 15px;
+        height: 15px;
+        border: 2px solid $bg-color-light-gray__transparent;
+        border-radius: 50%;
+        background-color: transparent;
+        opacity: 0.75;
+        &:hover,
+        &:focus {
+          background-color: $bg-color-light-gray__transparent;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 460px) {
+
+}
