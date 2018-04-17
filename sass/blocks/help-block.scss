@@ -1,0 +1,44 @@
+@media (max-width: 460px) {
+  .help-block {
+    position: relative;
+    width: 100%;
+    @include flex(column, flex-start, center, no-wrap);
+    &_hidden {
+      height: 0;
+      overflow: hidden;
+    }
+    &__hide-btn {
+      @include slider-button(40px, 17px, white);
+      position: fixed;
+      transform: rotate(90deg);
+      top: 55px;
+      right: 5%;
+      background-color: rgba(255, 255, 255, 0.25);
+      &_closed {
+        transform: rotate(-90deg);
+      }
+    }
+    &__questions {
+      background-color: $bg-color-gray__transparent;
+      width: 100%;
+      @include flex(column, space-between, flex-start, nowrap);
+    }
+    &__q-button {
+      @include btn_reset;
+      @include link(20px, 50px, none, 2px, #ffffff, #cccccc);
+    }
+    &__answer {
+      background-color: $bg-color-gray__transparent;
+      color: #ffffff;
+      transition-duration: 0.3s;
+      &_hidden {
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media (min-width: 460px) {
+
+}

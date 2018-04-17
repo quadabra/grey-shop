@@ -1,0 +1,15 @@
+@media (max-width: 460px) {
+  .catalog-help {
+    &__title {
+      margin: 0;
+      padding: 15px;
+      background-color: $bg-color-gray__transparent;
+      @include font(16px, 700);
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 460px) {
+
+}

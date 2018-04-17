@@ -82,7 +82,7 @@ gulp.task('serve', ['assemble'], function () {
     server: './build',
     notify: false,
     open: true,
-    port: 3502,
+    port: 3503,
     ui: false
   });
 

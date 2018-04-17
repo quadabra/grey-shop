@@ -146,10 +146,10 @@
   }
 }
 
-@mixin action-button($color, $hover_tx_color, $active_tx_color, $bg_color, $hover_bg_color, $active_bg_color, $x-padding, $height) {
+@mixin action-button($tx_color, $hover_tx_color, $active_tx_color, $bg_color, $hover_bg_color, $active_bg_color, $x-padding, $height) {
   outline: none;
   display: block;
-  color: $color;
+  color: $tx_color;
   padding: 0 $x-padding;
   line-height: $height;
   background-color: $bg_color;

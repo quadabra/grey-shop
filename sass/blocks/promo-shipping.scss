@@ -1,0 +1,28 @@
+@media (max-width: 460px) {
+  .promo-shipping {
+    position: relative;
+    min-height: 500px;
+    background-image: url("../img/thresh/twilight_sparkle_svg_by_tiwake-d5f1kmw.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    &__title {
+      margin: 0;
+      padding: 5px 15px;
+      background-color: rgba(255,255,255, 0.75);
+    }
+    &__text {
+      margin: 0;
+      padding: 5px 15px;
+      background-color: rgba(255,255,255, 0.75);
+    }
+    &__button {
+      position: absolute;
+      bottom: 30%;
+      right: 10%;
+    }
+  }
+}
+
+@media (min-width: 460px) {
+
+}
