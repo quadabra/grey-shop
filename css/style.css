@@ -814,6 +814,8 @@ h4 {
       align-items: flex-start;
       flex-wrap: nowrap; }
     .help-block__q-button {
+      width: 100%;
+      text-align: left;
       border: none;
       background: none;
       border-radius: 0;
@@ -828,7 +830,9 @@ h4 {
       cursor: pointer;
       transition-duration: 0.3s;
       transition-timing-function: ease;
-      transition-delay: 0; }
+      transition-delay: 0;
+      font-size: 14px;
+      font-weight: 700; }
       .help-block__q-button::before {
         content: '';
         position: absolute;

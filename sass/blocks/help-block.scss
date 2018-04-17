@@ -25,8 +25,10 @@
     }
     &__q-button {
       width: 100%;
+      text-align: left;
       @include btn_reset;
       @include link(20px, 50px, none, 2px, #ffffff, #cccccc);
+      @include font(14px, 700);
     }
     &__answer {
       background-color: $bg-color-gray__transparent;
