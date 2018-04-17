@@ -24,6 +24,7 @@
       @include flex(column, space-between, flex-start, nowrap);
     }
     &__q-button {
+      width: 100%;
       @include btn_reset;
       @include link(20px, 50px, none, 2px, #ffffff, #cccccc);
     }
