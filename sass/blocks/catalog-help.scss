@@ -1,5 +1,15 @@
 @media (max-width: 460px) {
   .catalog-help {
+    position: relative;
+    &__btn-container {
+      @include flex(row, flex-start, center, nowrap);
+      position: absolute;
+      top: 10px;
+      right: 5%;
+    }
+    &__decoration {
+      display: none;
+    }
     &__title {
       margin: 0;
       padding: 15px;
@@ -7,9 +17,67 @@
       @include font(16px, 700);
       color: white;
     }
+    &__hide-btn {
+      @include control-button(40px, 16px, #ffffff, #ffffff, 2px);
+      background-color: $bg-color-light-gray__transparent;
+      top: 0;
+      right: 5%;
+      transform: rotate(90deg);
+      z-index: 9;
+      &_closed {
+        transform: rotate(-90deg);
+      }
+    }
   }
 }
 
 @media (min-width: 460px) {
+  .catalog-help {
+    position: relative;
+    background-image: url("../img/thresh/bg.jpg");
+    background-repeat: no-repeat;
+    &__btn-container {
+      @include flex(row, flex-start, center, nowrap);
+      position: absolute;
+      bottom: -37px;
+      left: 17%;
+      right: 27%;
+    }
+    &__decoration {
+      width: 100px;
+      height: 3px;
+      background-color: $bg-color-light-gray__transparent;
+      &_left {
+        flex-grow: 8.5;
+      }
+      &_right {
+        flex-grow: 2;
+      }
+    }
+    &__title {
+      margin: 0;
+      padding: 15px;
+      background-color: $bg-color-gray__transparent;
+      @include font(16px, 700);
+      color: white;
+    }
+    &__hide-btn {
+      @include control-button(
+        24px,
+        8px,
+        $bg-color-light-gray__transparent,
+        $bg-color-light-gray__transparent,
+        2px
+      );
 
+      border: 2px solid $bg-color-light-gray__transparent;
+      transform: rotate(90deg);
+      z-index: 9;
+      overflow: hidden;
+      background-color: $bg-color-body;
+      &_closed {
+        transform: rotate(-90deg);
+      }
+    }
+  }
 }

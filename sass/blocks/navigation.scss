@@ -23,6 +23,17 @@
           2px,
           $font-color-main,
           $font-color-main);
+      &_expand::after {
+        content: "";
+        display: inline-block;
+        margin-left: 5px;
+        width: 6px;
+        height: 6px;
+        transform: translateY(-20%) rotate(-45deg);
+        border-bottom: 2px solid $font-color-main;
+        border-right: 2px solid $font-color-main;
+
+      }
     }
   }
 
@@ -73,6 +84,17 @@
           $font-color-main,
           $font-color-main
       );
+      &_expand::after {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin-left: 5px;
+        transform: translateY(-50%) rotate(45deg);
+        border-bottom: 2px solid $font-color-main;
+        border-right: 2px solid $font-color-main;
+        opacity: 0.5;
+      }
     }
     &__item {
       position: relative;
