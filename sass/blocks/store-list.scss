@@ -51,7 +51,7 @@
     &__item {
       position: relative;
       width: 22%;
-      margin: 15px 1.5% 5px 1.5%;
+      margin: 15px 1.5% 15px 1.5%;
       min-height: 500px;
 
       &:nth-child(4n) {
@@ -59,8 +59,12 @@
       }
     }
     &__image {
+      display: block;
       width: 100%;
       height: auto;
+      &-container {
+        width: 75%;
+      }
     }
     &__button {
       @include btn_reset;

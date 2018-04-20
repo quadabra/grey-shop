@@ -4,7 +4,7 @@
     width: 100%;
     height: $header-height;
     top: 0;
-    @include flex(row, flex-start, center, no-wrap);
+    @include flex(row, flex-start, center, nowrap);
     @include mdc-elevation(4);
     z-index: 10;
     background-color: $bg-color-gray__transparent;
@@ -21,7 +21,7 @@
     margin: 0 auto;
     padding: 0 2.5%;
     width: 100%;
-    @include flex(row, flex-start, center, no-wrap);
+    @include flex(row, flex-start, center, nowrap);
   }
 }
 
@@ -48,7 +48,7 @@
     margin: 0 auto;
     height: $header-height;
     width: 90%;
-    @include flex(row, flex-start, center, no-wrap);
+    @include flex(row, flex-start, center, nowrap);
     align-items: center;
   }
 }

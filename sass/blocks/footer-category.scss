@@ -12,11 +12,11 @@
       }
     }
     &__list {
-      @include flex(column, space-around, flex-start, no-wrap);
+      @include flex(column, space-around, flex-start, nowrap);
       &_social {
         margin: 0 auto;
         width: 80%;
-        @include flex(row, space-around, center, no-wrap);
+        @include flex(row, space-around, center, nowrap);
       }
     }
     &__input {
@@ -50,11 +50,11 @@
       }
     }
     &__list {
-      @include flex(column, space-around, flex-start, no-wrap);
+      @include flex(column, space-around, flex-start, nowrap);
       &_social {
         margin: 0 auto;
         width: 80%;
-        @include flex(row, space-around, center, no-wrap);
+        @include flex(row, space-around, center, nowrap);
       }
     }
     &__input {

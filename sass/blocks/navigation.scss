@@ -73,7 +73,7 @@
   .main-nav {
     width: 100%;
     margin-left: 25px;
-    @include flex(row, flex-start, center, no-wrap);
+    @include flex(row, flex-start, center, nowrap);
     &__link {
       @include font(16px, 900);
       @include link(
@@ -108,7 +108,7 @@
 
 .user-nav {
   margin-left: auto;
-  @include flex(row, flex-start, center, no-wrap);
+  @include flex(row, flex-start, center, nowrap);
   & > li:first-child {
     margin-right: 200px;
   }
@@ -122,7 +122,7 @@
         $font-color-main,
         $font-color-main
     );
-    @include flex(row, flex-start, center, no-wrap);
+    @include flex(row, flex-start, center, nowrap);
     & > img {
       margin-right: 5px;
     }
