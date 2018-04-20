@@ -109,7 +109,9 @@
 .user-nav {
   margin-left: auto;
   @include flex(row, flex-start, center, no-wrap);
-
+  & > li:first-child {
+    margin-right: 200px;
+  }
   &__link {
     @include font(14px, 700);
     @include link(

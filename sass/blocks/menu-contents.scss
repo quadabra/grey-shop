@@ -65,7 +65,7 @@
   .menu-contents {
     position: fixed;
     top: 50px;
-    z-index: 1;
+    z-index: 2;
     @include flex(row, flex-start, center, no-wrap);
     @include mdc-elevation(2);
     width: 100%;
@@ -73,6 +73,7 @@
     justify-content: space-around;
     &__section {
       width: 80%;
+      height: 300px;
     }
   }
 
@@ -91,13 +92,15 @@
     &__container {
       @include flex(row, flex-start, center, no-wrap);
       width: 100%;
-      margin: 0 auto;
+      margin: 30px auto 0 auto;
     }
     &__image-container {
       width: 45%;
     }
     &__item-list {
       width: 55%;
+      height: 150px;
+      @include flex(column, space-between, flex-start, nowrap);
     }
     &__image {
       outline: 1px solid rgba(255, 255, 255, 0.5);
@@ -106,13 +109,16 @@
       height: auto;
     }
     &__title {
-      margin: 0;
-      padding: 15px 0;
+      margin: 15px 0;
       @include flex(row, flex-start, center, no-wrap);
+      @include font(16px, 700);
       justify-content: space-around;
+      @include link(0, 50px, uppercase, 2px, $font-color-main, #cccccc);
+      text-align: center;
     }
     &__link {
-      padding: 0 30px;
+      @include link(30px, 35px, uppercase, 2px, $font-color-main, #cccccc);
+      @include font(15px, 700);
     }
   }
 
