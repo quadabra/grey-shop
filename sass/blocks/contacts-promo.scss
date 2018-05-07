@@ -1,0 +1,35 @@
+@media (max-width: 460px) {
+
+}
+
+@media (min-width: 460px) {
+  .contacts-promo {
+    width: 90%;
+    margin: 0 auto;
+    @include flex(row, center, center, nowrap);
+    &__container {
+      @include flex(row, flex-start, center, nowrap);
+    }
+    &__block-shipping{
+      margin: 15px;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: white;
+      color: $bg-color-gray__transparent;
+      @include flex(row, flex-start, center, nowrap);
+      @include mdc-elevation(4);
+    }
+    &__block-payment {
+      margin: 15px;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: white;
+      color: $bg-color-gray__transparent;
+      @include flex(column, flex-start, center, nowrap);
+      @include mdc-elevation(4);
+    }
+    &__img-container {
+      @include flex(row, flex-start, center, nowrap);
+    }
+  }
+}

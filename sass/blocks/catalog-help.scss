@@ -34,7 +34,7 @@
 @media (min-width: 460px) {
   .catalog-help {
     position: relative;
-    background-image: url("../img/thresh/bg.jpg");
+    background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
     &__btn-container {
       @include flex(row, flex-start, center, nowrap);

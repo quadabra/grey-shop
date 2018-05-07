@@ -1,0 +1,24 @@
+@media (max-width: 460px) {
+
+}
+
+@media (min-width: 460px) {
+  .contacts-info {
+    width: 100%;
+    background-color: $bg-color-gray__transparent;
+    @include flex(row, stretch, center, wrap);
+    &__social {
+      @include flex(row, center, center, nowrap);
+      &-link {
+        @include font(16px, 700);
+        text-transform: uppercase;
+      }
+    }
+    &__form {
+      @include flex(column, flex-start, flex-start, nowrap);
+    }
+    &__map {
+      width: 100%;
+    }
+  }
+}

@@ -587,7 +587,7 @@ h4 {
       background-color: greenyellow; }
   .catalog-help {
     position: relative;
-    background-image: url("../img/thresh/bg.jpg");
+    background-image: url("../img/bg.jpg");
     background-repeat: no-repeat; }
     .catalog-help__btn-container {
       display: flex;
