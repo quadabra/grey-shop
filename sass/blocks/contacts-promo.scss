@@ -11,6 +11,8 @@
       @include flex(row, flex-start, center, nowrap);
     }
     &__block-shipping{
+      width: 500px;
+      height: 120px;
       margin: 15px;
       padding: 15px;
       border-radius: 5px;
@@ -20,6 +22,19 @@
       @include mdc-elevation(4);
     }
     &__block-payment {
+      width: 500px;
+      height: 120px;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: white;
+      color: $bg-color-gray__transparent;
+      @include flex(column, flex-start, center, nowrap);
+      @include mdc-elevation(4);
+    }
+    &__block-russian {
+      width: 500px;
+      height: 120px;
       margin: 15px;
       padding: 15px;
       border-radius: 5px;

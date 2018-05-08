@@ -38,3 +38,7 @@ helpHide.addEventListener(`click`, (evt) => {
   helpBlock.classList.toggle(`help-block_hidden`);
   helpHide.classList.toggle(`catalog-help__hide-btn_closed`);
 });
+
+function MainMenu(data) {
+
+}
