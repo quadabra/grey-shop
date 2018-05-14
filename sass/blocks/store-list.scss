@@ -1,27 +1,87 @@
 @media (max-width: 460px) {
   .store-list {
-    width: 95%;
+    @include flex(row, flex-start, center, wrap);
+    width: 100%;
     margin: 0 auto;
     &__item-container {
-
+      @include flex(column, flex-start, center, nowrap);
+      @include mdc-elevation(2);
+      background-color: white;
+      transition-duration: 0.3s;
+      overflow: hidden;
     }
     &__item {
-      margin: 15px 0;
-      min-height: 500px;
-      @include mdc-elevation(2);
+      position: relative;
+      width: 95%;
+      margin: 20px auto;
     }
     &__image {
+      display: block;
       width: 100%;
       height: auto;
+      &-container {
+        width: 100%;
+      }
+    }
+    &__images {
+      @include flex(column, flex-start, center, nowrap);
+      position: absolute;
+      right: 5px;
+      &-item {
+        margin-top: 5px;
+        width: 75px;
+        height: 75px;
+        background-color: $bg-color-light-gray__transparent;
+        transition-duration: 0.3s;
+        border: 1px solid transparent;
+        &:hover {
+          border: 1px solid white;
+        }
+      }
+    }
+    &__item-name {
+      margin: 3px 0;
+      @include font(18px, 700);
+      & > a {
+        color: $bg-color-gray__transparent;
+        transition-duration: 0.3s;
+      }
+    }
+    &__item-brand {
+      margin: 0 0 2px 0;
+      @include font(16px, 400);
+      & > a {
+        color: $bg-color-gray__transparent;
+        transition-duration: 0.3s;
+      }
+    }
+    &__item-price {
+      margin: 0;
+    }
+    &__item-colors {
+      @include flex(row, flex-start, center, nowrap);
+      & > li {
+        margin: 3px;
+        width: 36px;
+        height: 36px;
+        background-color: $bg-color-light-gray__transparent;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        border: 1px solid transparent;
+        &:hover {
+          border: 1px solid white;
+        }
+      }
     }
     &__button {
       @include btn_reset;
-      @include action-button(white, grey, orange, yellowgreen, greenyellow, green, 40px, 60px);
+      @include action-button(white, grey, orange, yellowgreen, greenyellow, green, 40px, 40px);
       @include font(18px, 700);
       @include mdc-elevation(2);
+      transition-duration: 0.3s;
       cursor: pointer;
-      max-width: 150px;
-      margin: 0 auto;
+      max-width: 250px;
+      margin: 20px auto;
     }
   }
 }
