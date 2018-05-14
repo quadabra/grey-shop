@@ -2,10 +2,9 @@
 
 }
 
-@media (min-width: 460px) {
+@media (min-width: 1200px) {
   .contacts-info {
     width: 100%;
-    background-color: $bg-color-gray__transparent;
     @include flex(row, stretch, center, wrap);
     &__block {
       align-self: flex-start;
@@ -14,30 +13,35 @@
     &__info {
       @include flex(column, space-around, flex-start, nowrap);
       height: 100px;
+      color: $bg-color-gray__transparent;
+      & > a {
+        color: inherit;
+      }
     }
     &__social {
       @include flex(row, flex-start, center, nowrap);
       &-link {
         @include font(16px, 700);
+        color: $bg-color-gray__transparent;
         text-transform: uppercase;
       }
     }
     &__form {
       @include flex(column, flex-start, flex-start, nowrap);
-      color: white;
+      color: $bg-color-gray__transparent;
       &-mail {
         display: block;
-        width: 600px;
+        width: 400px;
       }
       &-text {
         display: block;
-        width: 600px;
-        height: 300px;
+        width: 400px;
+        height: 200px;
         resize: none;
       }
     }
     &__map {
-      width: 50%;
+      width: 40%;
     }
   }
 }

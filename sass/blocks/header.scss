@@ -37,6 +37,7 @@
     background-image: linear-gradient($bg-color-gray__transparent, $bg-color-light-gray__transparent);
     &__logo {
       & > img {
+        display: block;
         width: 275px;
         margin-top: 23px;
         filter: drop-shadow(2px 2px 6px rgba(44, 44, 44, 0.45));
@@ -47,8 +48,8 @@
   .header-navigation {
     margin: 0 auto;
     height: $header-height;
-    width: 90%;
+    min-width: 1200px;
+    max-width: 1600px;
     @include flex(row, flex-start, center, nowrap);
-    align-items: center;
   }
 }

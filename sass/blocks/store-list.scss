@@ -29,7 +29,7 @@
 @media (min-width: 460px) {
   .store-list {
     @include flex(row, flex-start, center, wrap);
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     &__item-container {
       position: absolute;
@@ -37,6 +37,7 @@
       bottom: 0;
       left: 0;
       right: 0;
+      @include flex(column, flex-start, center, nowrap);
       @include mdc-elevation(2);
       background-color: white;
       transition-duration: 0.3s;
@@ -50,8 +51,8 @@
     }
     &__item {
       position: relative;
-      width: 22%;
-      margin: 15px 1.5% 15px 1.5%;
+      width: 23%;
+      margin: 10px 1% 10px 1%;
       min-height: 500px;
 
       &:nth-child(4n) {
@@ -63,8 +64,11 @@
       width: 100%;
       height: auto;
       &-container {
-        width: 75%;
+        width: 100%;
       }
+    }
+    &__item-text {
+      margin: 0;
     }
     &__button {
       @include btn_reset;

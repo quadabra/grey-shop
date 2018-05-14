@@ -11,7 +11,7 @@
       @include flex(row, flex-start, center, nowrap);
     }
     &__block-shipping{
-      width: 500px;
+      width: 350px;
       height: 120px;
       margin: 15px;
       padding: 15px;
@@ -22,7 +22,7 @@
       @include mdc-elevation(4);
     }
     &__block-payment {
-      width: 500px;
+      width: 350px;
       height: 120px;
       margin: 15px;
       padding: 15px;
@@ -33,7 +33,7 @@
       @include mdc-elevation(4);
     }
     &__block-russian {
-      width: 500px;
+      width: 350px;
       height: 120px;
       margin: 15px;
       padding: 15px;

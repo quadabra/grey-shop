@@ -72,12 +72,12 @@
 @media (min-width: 460px) {
   .main-nav {
     width: 100%;
-    margin-left: 25px;
+    margin-left: 5px;
     @include flex(row, flex-start, center, nowrap);
     &__link {
       @include font(16px, 900);
       @include link(
-          20px,
+          10px,
           50px,
           uppercase,
           2px,
@@ -100,32 +100,30 @@
       position: relative;
     }
   }
-}
 
-.user {
-  margin-left: auto;
-}
-
-.user-nav {
-  margin-left: auto;
-  @include flex(row, flex-start, center, nowrap);
-  & > li:first-child {
-    margin-right: 200px;
+  .user {
+    flex-grow: 1;
   }
-  &__link {
-    @include font(14px, 700);
-    @include link(
-        10px,
-        50px,
-        uppercase,
-        2px,
-        $font-color-main,
-        $font-color-main
-    );
-    @include flex(row, flex-start, center, nowrap);
-    & > img {
-      margin-right: 5px;
+
+  .user-nav {
+    @include flex(row, flex-end, center, nowrap);
+    & > li:first-child {
+      margin:0 auto;
+    }
+    &__link {
+      @include font(14px, 700);
+      @include link(
+          10px,
+          50px,
+          uppercase,
+          2px,
+          $font-color-main,
+          $font-color-main
+      );
+      @include flex(row, space-around, center, nowrap);
+      & > img {
+        margin-right: 5px;
+      }
     }
   }
 }
-

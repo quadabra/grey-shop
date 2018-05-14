@@ -70,11 +70,13 @@
     </ul>
   </nav>
 </header>
-<ul class="breadcrumbs">
-  <li><a class="breadcrumbs__link" href="">home</a></li>
-  <li><a class="breadcrumbs__link" href="">category</a></li>
-  <li><a class="breadcrumbs__link" href="">subcategory</a></li>
-</ul>
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">home</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">category</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">subcategory</a></li>
+  </ul>
+</div>
 <article class="menu-contents">
   <section class="menu-contents__section menu-contents__section_camo">
     <ul class="category-card-list">
@@ -170,79 +172,83 @@
   </section>
 </article>
 <main class="contacts">
-  <section class="contacts-promo">
-    <article class="contacts-promo__container contacts-promo__container_shipping">
-      <a class="contacts-promo__block-shipping" href="#">
-        <div class="contacts-promo__img-container">
-          <img src="img/shipping.jpg" alt="shipping logo" width="130" height="83">
+  <div class="container">
+    <section class="contacts-promo">
+      <article class="contacts-promo__container contacts-promo__container_shipping">
+        <a class="contacts-promo__block-shipping" href="#">
+          <div class="contacts-promo__img-container">
+            <img src="img/shipping.jpg" alt="shipping logo" width="130" height="83">
+          </div>
+          <div class="contacts-promo__description-container">
+            <h2>Worldwide shipping</h2>
+            <p>and to:&nbsp;<span>country</span></p>
+          </div>
+        </a>
+      </article>
+      <article class="contacts-promo__payment">
+        <a class="contacts-promo__block-payment" href="">
+          <div class="contacts-promo__img-container">
+            <img src="img/paypal-logo-png-1.png" alt="paypal logo" width="120">
+            <img src="img/visa.png" alt="visa logo" width="82">
+            <img src="img/mastercard_PNG23.png" alt="" width="82">
+          </div>
+          <div class="contacts-promo__description-container">
+            <h2>Guarantee payment</h2>
+          </div>
+        </a>
+      </article>
+      <article class="contacts-promo__russian">
+        <a class="contacts-promo__block-russian" href="#">
+          <h2>146% Russian</h2>
+        </a>
+      </article>
+    </section>
+  </div>
+  <div class="container">
+    <section class="contacts-info">
+      <iframe class="contacts-info__map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1123.9661390528884!2d37.71085955835684!3d55.70754890633854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab52c16edf4b3%3A0x726330d23bb86ba9!2sGrey+Shop!5e0!3m2!1sru!2sru!4v1525698495645"
+              height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="contacts-info__block">
+        <div class="contacts-info__info">
+          <a href="mailto:sale@grey-line.com">sale@grey-line.com</a>
+          <a href="tel:+74956469673">+7(495) 6469673</a>
         </div>
-        <div class="contacts-promo__description-container">
-          <h2>Worldwide shipping</h2>
-          <p>and to:&nbsp;<span>country</span></p>
-        </div>
-      </a>
-    </article>
-    <article class="contacts-promo__payment">
-      <a class="contacts-promo__block-payment" href="">
-        <div class="contacts-promo__img-container">
-          <img src="img/paypal-logo-png-1.png" alt="paypal logo" width="120">
-          <img src="img/visa.png" alt="visa logo" width="82">
-          <img src="img/mastercard_PNG23.png" alt="" width="82">
-        </div>
-        <div class="contacts-promo__description-container">
-          <h2>Guarantee payment</h2>
-        </div>
-      </a>
-    </article>
-    <article class="contacts-promo__russian">
-      <a class="contacts-promo__block-russian" href="#">
-        <h2>146% Russian</h2>
-      </a>
-    </article>
-  </section>
-  <section class="contacts-info">
-    <iframe class="contacts-info__map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1123.9661390528884!2d37.71085955835684!3d55.70754890633854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab52c16edf4b3%3A0x726330d23bb86ba9!2sGrey+Shop!5e0!3m2!1sru!2sru!4v1525698495645"
-            height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-    <div class="contacts-info__block">
-      <div class="contacts-info__info">
-        <a href="mailto:sale@grey-line.com">sale@grey-line.com</a>
-        <a href="tel:+74956469673">+7(495) 6469673</a>
+        <ul class="contacts-info__social">
+          <li>
+            <a class="contacts-info__social-link" href="#">
+              <span class="">Facebook</span>
+              <img src="img/facebook.svg" alt="we on facebook">
+            </a>
+          </li>
+          <li>
+            <a class="contacts-info__social-link" href="">
+              <span class="">Twitter</span>
+              <img src="img/twitter.svg" alt="twitter">
+            </a>
+          </li>
+          <li>
+            <a class="contacts-info__social-link" href="">
+              <span class="">Youtube</span>
+              <img src="img/youtube.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a class="contacts-info__social-link" href="">
+              <span class="">Instagram</span>
+              <img src="img/instagram.svg" alt="">
+            </a>
+          </li>
+        </ul>
+        <form class="contacts-info__form" action="#">
+          <label for="email-field">Contact us</label>
+          <input class="contacts-info__form-mail" type="email" name="email" id="email-field" placeholder="your email">
+          <label for="email-message">Tell us</label>
+          <textarea class="contacts-info__form-text" id="email-message" placeholder="your message"></textarea>
+        </form>
       </div>
-      <ul class="contacts-info__social">
-        <li>
-          <a class="contacts-info__social-link" href="#">
-            <span class="">Facebook</span>
-            <img src="img/facebook.svg" alt="we on facebook">
-          </a>
-        </li>
-        <li>
-          <a class="contacts-info__social-link" href="">
-            <span class="">Twitter</span>
-            <img src="img/twitter.svg" alt="twitter">
-          </a>
-        </li>
-        <li>
-          <a class="contacts-info__social-link" href="">
-            <span class="">Youtube</span>
-            <img src="img/youtube.svg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="contacts-info__social-link" href="">
-            <span class="">Instagram</span>
-            <img src="img/instagram.svg" alt="">
-          </a>
-        </li>
-      </ul>
-      <form class="contacts-info__form" action="#">
-        <label for="email-field">Contact us</label>
-        <input class="contacts-info__form-mail" type="email" name="email" id="email-field" placeholder="your email">
-        <label for="email-message">Tell us</label>
-        <textarea class="contacts-info__form-text" id="email-message" placeholder="your message"></textarea>
-      </form>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>
 <footer class="page-footer">
   <div class="page-footer__container">
