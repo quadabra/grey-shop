@@ -41,20 +41,28 @@
       @include mdc-elevation(2);
       background-color: white;
       transition-duration: 0.3s;
+      overflow: hidden;
       &:hover {
-        top: -8px;
-        bottom: -8px;
-        left: -8px;
-        right: -8px;
+        top: -12px;
+        bottom: -90px;
+        left: -12px;
+        right: -12px;
+        z-index: 9;
         @include mdc-elevation(6);
+        & > .store-list__button {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        & > .store-list__images {
+          opacity: 1;
+        }
       }
     }
     &__item {
       position: relative;
       width: 23%;
       margin: 10px 1% 10px 1%;
-      min-height: 500px;
-
+      height: 460px;
       &:nth-child(4n) {
         margin-right: auto;
       }
@@ -67,18 +75,77 @@
         width: 100%;
       }
     }
-    &__item-text {
+    &__images {
+      @include flex(column, flex-start, center, nowrap);
+      position: absolute;
+      right: 5px;
+      transition-duration: 0.3s;
+      opacity: 0;
+      &-item {
+        margin-top: 5px;
+        width: 75px;
+        height: 75px;
+        background-color: $bg-color-light-gray__transparent;
+        transition-duration: 0.3s;
+        border: 1px solid transparent;
+        &:hover {
+          border: 1px solid white;
+        }
+      }
+    }
+    &__item-name {
+      margin: 3px 0;
+      @include font(18px, 700);
+      & > a {
+        color: $bg-color-gray__transparent;
+        transition-duration: 0.3s;
+        &:hover {
+          color: #00b0ff;
+        }
+      }
+    }
+    &__item-brand {
+      margin: 0 0 2px 0;
+      @include font(16px, 400);
+      & > a {
+        color: $bg-color-gray__transparent;
+        transition-duration: 0.3s;
+        &:hover {
+          color: #00b0ff;
+        }
+      }
+    }
+    &__item-price {
       margin: 0;
     }
+    &__item-colors {
+      @include flex(row, flex-start, center, nowrap);
+      & > li {
+        margin: 3px;
+        width: 36px;
+        height: 36px;
+        background-color: $bg-color-light-gray__transparent;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        border: 1px solid transparent;
+        &:hover {
+          border: 1px solid white;
+        }
+      }
+    }
     &__button {
+      position: absolute;
+      bottom: 20px;
       @include btn_reset;
-      @include action-button(white, grey, orange, yellowgreen, greenyellow, green, 40px, 60px);
+      @include action-button(white, grey, orange, yellowgreen, greenyellow, green, 40px, 40px);
       @include font(18px, 700);
       @include mdc-elevation(2);
       transition-duration: 0.3s;
       cursor: pointer;
-      max-width: 150px;
+      max-width: 250px;
       margin: 0 auto;
+      transform: translateY(250px);
+      opacity: 0;
     }
   }
 }
