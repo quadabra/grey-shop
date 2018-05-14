@@ -1,10 +1,52 @@
 @media (max-width: 460px) {
+  .contacts-promo {
+    width: 95%;
+    margin: 0 auto;
+    @include flex(column, center, stretch, nowrap);
+    &__container {
+      @include flex(row, flex-start, center, nowrap);
+      margin: 15px 0;
+    }
+    &__block-shipping{
+      width: 100%;
+      height: 120px;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: white;
+      color: $bg-color-gray__transparent;
+      @include flex(row, flex-start, center, nowrap);
+      @include mdc-elevation(4);
+    }
+    &__block-payment {
+      width: 100%;
+      height: 120px;
 
+      padding: 15px;
+      border-radius: 5px;
+      background-color: white;
+      color: $bg-color-gray__transparent;
+      @include flex(column, flex-start, center, nowrap);
+      @include mdc-elevation(4);
+    }
+    &__block-russian {
+      width: 100%;
+      height: 120px;
+
+      padding: 15px;
+      border-radius: 5px;
+      background-color: white;
+      color: $bg-color-gray__transparent;
+      @include flex(column, flex-start, center, nowrap);
+      @include mdc-elevation(4);
+    }
+    &__img-container {
+      @include flex(row, flex-start, center, nowrap);
+    }
+  }
 }
 
 @media (min-width: 460px) {
   .contacts-promo {
-    width: 90%;
     margin: 0 auto;
     @include flex(row, center, center, nowrap);
     &__container {
