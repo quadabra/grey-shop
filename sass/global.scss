@@ -46,5 +46,29 @@ h4 {
 .container {
   margin: 0 auto;
   min-width: 320px;
-  max-width: 1200px;
 }
+
+@include media(">tablet_large", "<desktop_small") {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@include media(">desktop_small", "<desktop_medium") {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@include media(">desktop_medium") {
+  .container {
+    max-width: 1800px;
+  }
+}
+/*
+@include media(">desktop_large") {
+  .container {
+    max-width: 2500px;
+  }
+}
+*/

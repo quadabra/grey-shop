@@ -1,3 +1,36 @@
+/* Screen res */
+
+$mobile__small: 420px;
+$mobile__large: 600px;
+$tablet__small: 768px;
+$tablet__large: 900px;
+$desktop__small: 1200px;
+$desktop__medium:1800px;
+$desktop__large: 2500px;
+
+@function translate-media-condition($c) {
+  $condMap: (
+    "screen": "screen",
+    "print": "only print",
+    "retina": "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
+    ">mobile_small": "(min-width: #{$mobile__small + 1})",
+    "<mobile_small": "(max-width: #{$mobile__small})",
+    ">mobile_large": "(min-width: #{$mobile__large + 1})",
+    "<mobile_large": "(max-width: #{$mobile__large})",
+    ">tablet_small": "(min-width: #{$tablet__small + 1})",
+    "<tablet_small": "(max-width: #{$tablet__small})",
+    ">tablet_large": "(min-width: #{$tablet__large + 1})",
+    "<tablet_large": "(max-width: #{$tablet__large})",
+    ">desktop_small": "(min-width: #{$desktop__small + 1})",
+    "<desktop_small": "(max-width: #{$desktop__small})",
+    ">desktop_medium": "(min-width: #{$desktop__medium + 1})",
+    "<desktop_medium": "(max-width: #{$desktop__medium})",
+    ">desktop_large": "(min-width: #{$desktop__large + 1})",
+    "<desktop_large": "(max-width: #{$desktop__large})"
+  );
+  @return map-get( $condMap, $c );
+}
+
 /* bg colors */
 $bg-color-gray__transparent: rgba(25, 25, 33, 0.85);
 $bg-color-light-gray__transparent: rgba(58, 58, 66, 0.65);

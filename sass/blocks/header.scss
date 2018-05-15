@@ -1,4 +1,4 @@
-@media (max-width: 460px) {
+@include media("screen", "<mobile_large") {
   .page-header {
     position: fixed;
     width: 100%;
@@ -25,7 +25,34 @@
   }
 }
 
-@media (min-width: 460px) {
+@include media("screen", ">mobile_large", "<tablet_large") {
+  .page-header {
+    position: fixed;
+    width: 100%;
+    height: $header-height;
+    top: 0;
+    @include flex(row, flex-start, center, nowrap);
+    @include mdc-elevation(4);
+    z-index: 10;
+    background-color: $bg-color-gray__transparent;
+    background-image: linear-gradient($bg-color-gray__transparent, $bg-color-light-gray__transparent);
+    &__logo {
+      margin: 2px auto 0 0;
+      & > img {
+        width: 175px;
+      }
+    }
+  }
+
+  .header-navigation {
+    margin: 0 auto;
+    padding: 0 2.5%;
+    width: 100%;
+    @include flex(row, flex-start, center, nowrap);
+  }
+}
+
+@include media(">tablet_large", "<desktop_large") {
   .page-header {
     position: fixed;
     width: 100%;
@@ -38,8 +65,8 @@
     &__logo {
       & > img {
         display: block;
-        width: 275px;
-        margin-top: 23px;
+        width: 225px;
+        margin-top: 25px;
         filter: drop-shadow(2px 2px 6px rgba(44, 44, 44, 0.45));
       }
     }
@@ -48,8 +75,41 @@
   .header-navigation {
     margin: 0 auto;
     height: $header-height;
-    min-width: 1200px;
-    max-width: 1600px;
+    min-width: 900px;
+    max-width: 1200px;
+    width: 95%;
     @include flex(row, flex-start, center, nowrap);
+  }
+  @include media(">desktop_small") {
+    .page-header {
+      &__logo {
+        & > img {
+          display: block;
+          width: 255px;
+          margin-top: 22px;
+          filter: drop-shadow(2px 2px 6px rgba(44, 44, 44, 0.45));
+        }
+      }
+    }
+    .header-navigation {
+      max-width: 1800px;
+      width: 95%;
+    }
+  }
+  @include media(">desktop_medium") {
+    .page-header {
+      &__logo {
+        & > img {
+          display: block;
+          width: 275px;
+          margin-top: 23px;
+          filter: drop-shadow(2px 2px 6px rgba(44, 44, 44, 0.45));
+        }
+      }
+    }
+    .header-navigation {
+      max-width: 2500px;
+      width: 90%;
+    }
   }
 }

@@ -1,4 +1,4 @@
-@media (max-width: 460px) {
+@include media("screen", "<mobile_large") {
   .main-nav {
     position: absolute;
     z-index: 9;
@@ -69,15 +69,85 @@
   }
 }
 
-@media (min-width: 460px) {
+@include media("screen", ">mobile_large", "<tablet_large") {
   .main-nav {
+    position: absolute;
+    z-index: 9;
     width: 100%;
-    margin-left: 5px;
-    @include flex(row, flex-start, center, nowrap);
+    height: calc(100vh - 50px);
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    background-color: $bg-color-gray__transparent;
+    @include flex(column, flex-start, center, no-wrap);
+    @include mdc-elevation(2);
+    overflow: scroll;
+    &__item {
+      width: 100%;
+    }
     &__link {
       @include font(16px, 900);
       @include link(
-          10px,
+          20px,
+          50px,
+          uppercase,
+          2px,
+          $font-color-main,
+          $font-color-main);
+      &_expand::after {
+        content: "";
+        display: inline-block;
+        margin-left: 5px;
+        width: 6px;
+        height: 6px;
+        transform: translateY(-20%) rotate(-45deg);
+        border-bottom: 2px solid $font-color-main;
+        border-right: 2px solid $font-color-main;
+
+      }
+    }
+  }
+
+  .user-nav {
+    left: 0;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-top: 10px;
+    border-top: $border-white-transparent;
+    width: 100%;
+    @include flex(column, space-around, flex-start, no-wrap);
+    & > li {
+      width: 100%;
+    }
+    &__link {
+      font-family: 'Lato', sans-serif;
+      @include font(14px, 700);
+      @include link(
+          20px,
+          50px,
+          uppercase,
+          2px,
+          $font-color-main,
+          $font-color-main);
+      @include flex(row, flex-start, center, no-wrap);
+    }
+  }
+
+  .menu-hidden {
+    display: none;
+    height: 0;
+    transition-duration: 0.3s;
+  }
+}
+
+@include media(">tablet_large", "<desktop_large") {
+  .main-nav {
+    width: 100%;
+    @include flex(row, flex-start, center, nowrap);
+    &__link {
+      @include font(12px, 700);
+      @include link(
+          7px,
           50px,
           uppercase,
           2px,
@@ -108,12 +178,12 @@
   .user-nav {
     @include flex(row, flex-end, center, nowrap);
     & > li:first-child {
-      margin:0 auto;
+      margin: 0 auto;
     }
     &__link {
-      @include font(14px, 700);
+      @include font(10px, 700);
       @include link(
-          10px,
+          6px,
           50px,
           uppercase,
           2px,
@@ -122,7 +192,50 @@
       );
       @include flex(row, space-around, center, nowrap);
       & > img {
-        margin-right: 5px;
+        margin-right: 3px;
+      }
+    }
+  }
+  @include media(">desktop_small") {
+    .main-nav {
+      margin-left: 5px;
+      &__link {
+        @include font(14px, 700);
+        @include link(
+            10px,
+            50px,
+            uppercase,
+            2px,
+            $font-color-main,
+            $font-color-main
+        );
+      }
+    }
+    .user-nav {
+      &__link {
+        @include font(14px, 700);
+      }
+    }
+  }
+
+  @include media(">desktop_medium") {
+    .main-nav {
+      margin-left: 15px;
+      &__link {
+        @include font(16px, 900);
+        @include link(
+            20px,
+            50px,
+            uppercase,
+            2px,
+            $font-color-main,
+            $font-color-main
+        );
+      }
+    }
+    .user-nav {
+      &__link {
+        @include font(15px, 700);
       }
     }
   }

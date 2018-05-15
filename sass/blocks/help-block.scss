@@ -1,4 +1,4 @@
-@media (max-width: 460px) {
+@include media("screen", "<mobile_large") {
   .help-block {
     position: relative;
     width: 100%;
