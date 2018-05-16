@@ -8,13 +8,31 @@ hamburger.addEventListener(`click`, function (evt) {
   hamburger.classList.toggle(`hamburger_active`);
 });
 
-const camoBtn = document.querySelector(`.main-nav__link_camo`);
-const camoContent = document.querySelector(`.menu-contents__section_camo`);
+const menuItems = document.querySelectorAll(`.main-nav__submenu`);
+const menuContents = document.querySelectorAll(`.menu-contents`);
 
-camoBtn.addEventListener(`click`, function (evt) {
-  evt.preventDefault();
-  camoContent.classList.toggle(`section-show`);
-  menu.classList.toggle(`menu-hidden`);
+function menuHide(target) {
+  target.querySelector(`.menu-contents`).style.height = `0`;
+}
+
+function menuOpen(target) {
+  target.querySelector(`.menu-contents`).style.height = `auto`;
+}
+
+function menuAllClose(callback) {
+  [].forEach.call(menuContents, (it) => {
+    it.style.height = `0`;
+  });
+  callback();
+}
+
+[].forEach.call(menuItems, (it) => {
+  it.addEventListener(`mouseenter`, function (evt) {
+    menuAllClose(() => menuOpen(evt.target));
+  });
+  it.addEventListener(`mouseleave`, function (evt) {
+    setTimeout(() => menuHide(evt.target), 1000);
+  });
 });
 
 const helpBtn = document.querySelectorAll(`.help-block__q-button`);

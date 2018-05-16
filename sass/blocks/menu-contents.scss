@@ -1,5 +1,4 @@
-@media (max-width: 459px) {
-
+@include media("screen", "<mobile_large")  {
   .menu-contents {
     position: fixed;
     top: 50px;
@@ -61,19 +60,82 @@
   }
 }
 
-@media (min-width: 460px) {
+@include media("screen", ">mobile_large", "<tablet_large") {
   .menu-contents {
     position: fixed;
     top: 50px;
-    z-index: 2;
-    @include flex(row, flex-start, center, no-wrap);
-    @include mdc-elevation(2);
+    width: 100%;
+    max-height: calc(100vh - 50px);
+    z-index: 1;
+    margin: 0;
+    overflow: scroll;
+  }
+
+  .category-card-list {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
     width: 100%;
     background-color: $bg-color-gray__transparent;
-    justify-content: space-around;
+    &__card {
+      padding: 10px;
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+    &__container {
+      @include flex(row, flex-start, center, no-wrap);
+      justify-content: space-between;
+      width: 95%;
+      margin: 0 auto;
+    }
+    &__image-container {
+      width: 45%;
+      max-height: 200px;
+      overflow: hidden;
+    }
+    &__image {
+      display: block;
+      outline: 1px solid white;
+      width: 100%;
+      height: auto;
+    }
+    &__title {
+      margin: 0;
+      padding: 15px 0;
+      @include flex(row, flex-start, center, no-wrap);
+      justify-content: space-around;
+    }
+    &__link {
+      padding: 0 30px;
+    }
+    &__item-list {
+      width: 55%;
+      overflow: hidden;
+    }
+  }
+  .menu-contents__section_camo {
+    display: none;
+  }
+  .section-show {
+    display: block;
+  }
+}
+
+@include media(">tablet_large", "<desktop_large") {
+  .menu-contents {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 2;
+    @include mdc-elevation(2);
+    background-color: $bg-color-gray__transparent;
+    overflow: hidden;
+    transition-duration: 0.3s;
     &__section {
-      width: 80%;
-      height: 300px;
+      width: 100%;
     }
   }
 
@@ -118,14 +180,7 @@
     }
     &__link {
       @include link(30px, 35px, uppercase, 2px, $font-color-main, #cccccc);
-      @include font(15px, 700);
+      @include font(14px, 700);
     }
-  }
-
-  .menu-contents__section_camo {
-    display: none;
-  }
-  .section-show {
-    display: block;
   }
 }
