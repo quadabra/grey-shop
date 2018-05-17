@@ -16,7 +16,7 @@ function menuHide(target) {
 }
 
 function menuOpen(target) {
-  target.querySelector(`.menu-contents`).style.height = `auto`;
+  target.querySelector(`.menu-contents`).style.height = `300px`;
 }
 
 function menuAllClose(callback) {
