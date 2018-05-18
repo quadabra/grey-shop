@@ -454,26 +454,99 @@
     </ul>
   </nav>
 </header>
-
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">home</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">category</a></li>
+    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="">subcategory</a></li>
+  </ul>
+</div>
 <main>
   <div class="container">
-    <article class="item-details">
-      <div class="item-details__images-block">
-        <img class="item-details__image-main" src="#" alt="">
-        <ul class="item-details__images-optional">
+    <h1 class="product-title">product title</h1>
+  </div>
+  <div class="container">
+    <article class="product-details">
+      <div class="product-details__images-block">
+        <img class="product-details__image-main" src="img/test.jpg" alt="">
+        <ul class="product-details__images-optional">
           <li>
-            <img src="" alt="">
+            <img src="#" alt="">
           </li>
           <li>
-            <img src="" alt="">
+            <img src="#" alt="">
           </li>
           <li>
-            <img src="" alt="">
+            <img src="#" alt="">
           </li>
         </ul>
       </div>
-      <section class="item-details__description">
+      <section class="product-details__description">
+        <p class="product-details__description-brand">
+          VoEn
+        </p>
+        <h1 class="product-details__description-name">
+          Super Shmotka
+        </h1>
+        <div class="product-details__rating">
 
+        </div>
+        <ul class="product-details__options">
+          <li class="product-details__options-description-info">
+            Description
+          </li>
+          <li class="product-details__options-size-info">
+            Size
+          </li>
+          <li class="product-details__options-delivery-info">
+            Delivery
+          </li>
+        </ul>
+        <p class="product-details__price">100$</p>
+        <form class="product-details__buy-form" action="#">
+          <ul class="product-details__buy-options">
+            <li class="product-details__color-selector">
+              <p>Select Color</p>
+              <label class="product-details__color-option">
+                <img src="#" alt="">
+                <input class="visually-hidden" type="radio" name="product-color" value="color1">
+              </label>
+              <label class="product-details__color-option">
+                <img src="#" alt="">
+                <input class="visually-hidden" type="radio" name="product-color" value="color2">
+              </label>
+              <label class="product-details__color-option">
+                <img src="#" alt="">
+                <input class="visually-hidden" type="radio" name="product-color" value="color3">
+              </label>
+              <label class="product-details__color-option">
+                <img src="#" alt="">
+                <input class="visually-hidden" type="radio" name="product-color" value="color4">
+              </label>
+            </li>
+            <li>
+              <p>Select Size</p>
+              <label class="product-details__size-option">
+                <span>S</span>
+                <input class="visually-hidden" type="radio" name="product-size" value="s">
+              </label>
+              <label class="product-details__size-option">
+                <span>M</span>
+                <input class="visually-hidden" type="radio" name="product-size" value="m">
+              </label>
+              <label class="product-details__size-option">
+                <span>L</span>
+                <input class="visually-hidden" type="radio" name="product-size" value="l">
+              </label>
+              <label class="product-details__size-option">
+                <span>XL</span>
+                <input class="visually-hidden" type="radio" name="product-size" value="xl">
+              </label>
+            </li>
+          </ul>
+          <label for="amount">Quantity:</label>
+          <input type="number" id="amount">
+        </form>
       </section>
     </article>
   </div>

@@ -1,0 +1,44 @@
+@include media("screen", "<mobile_large") {
+
+}
+
+@include media("screen", ">mobile_large", "<tablet_large") {
+
+}
+
+@include media(">tablet_large", "<desktop_large") {
+  .product-details {
+    @include flex(row, space-between, flex-start, nowrap);
+    @include mdc-elevation(4);
+    padding: 2.5%;
+    background-color: white;
+    &__images-block {
+      width: 44%;
+      position: relative;
+    }
+    &__image-main {
+      width: 100%;
+      height: auto;
+    }
+    &__images-optional {
+      @include flex(row, flex-start, center, nowrap);
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      & > li {
+        margin-right: 5px;
+        width: 75px;
+        height: 75px;
+        background-color: $bg-color-light-gray__transparent;
+        border: 1px solid transparent;
+        &:hover {
+          border: 1px solid white;
+        }
+      }
+    }
+    &__description {
+      width: 44%;
+    }
+  }
+}
