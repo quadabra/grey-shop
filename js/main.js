@@ -51,9 +51,26 @@ const btnBlock = document.querySelector(`.help-block__questions`);
 const helpHide = document.querySelector(`.catalog-help__hide-btn`);
 const helpBlock = document.querySelector(`.help-block`);
 
-helpHide.addEventListener(`click`, (evt) => {
-  evt.preventDefault();
-  helpBlock.classList.toggle(`help-block_hidden`);
-  helpHide.classList.toggle(`catalog-help__hide-btn_closed`);
-});
+if (helpHide) {
+  helpHide.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    helpBlock.classList.toggle(`help-block_hidden`);
+    helpHide.classList.toggle(`catalog-help__hide-btn_closed`);
+  });
+}
 
+let ul11 = document.querySelector(`.product-details__options`);
+let container = ul11.querySelectorAll(`.product-details__options-container`);
+let productInfoTitles = ul11.querySelectorAll(`.product-details__options-info`);
+let productInfoText = ul11.querySelectorAll(`.product-details__options-text`);
+let productInfoExtend = ul11.querySelectorAll(`.product-details__options-extend`);
+
+[].forEach.call(productInfoTitles, (it, i) => {
+  it.classList.add(`zz`);
+  it.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    productInfoText[i].classList.toggle(`product-details__options-text_active`);
+    productInfoExtend[i].classList.toggle(`product-details__options-extend_active`);
+    container[i].classList.toggle(`product-details__options-container_active`);
+  });
+});
