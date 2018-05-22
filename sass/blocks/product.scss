@@ -198,6 +198,16 @@
         cursor: pointer;
         font-size: 22px;
         width: 40px;
+        outline: none;
+        transition-duration: 0.1s;
+        &:hover {
+          background-color: $bg-color-light-gray__transparent;
+          color: white;
+        }
+        &:active {
+          background-color: whitesmoke;
+          color: $bg-color-light-gray__transparent;
+        }
       }
       & > input {
         pointer-events: none;
