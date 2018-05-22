@@ -74,3 +74,18 @@ let productInfoExtend = ul11.querySelectorAll(`.product-details__options-extend`
     container[i].classList.toggle(`product-details__options-container_active`);
   });
 });
+
+const amount = document.querySelector(`.product-details__amount-input-control`);
+const amountIncrease = amount.querySelector(`#plus`);
+const amountDecrease = amount.querySelector(`#minus`);
+const amountInput = amount.querySelector(`input`);
+
+amount.addEventListener(`click`, (evt) => {
+  evt.preventDefault();
+  if (evt.target === amountIncrease) {
+    amountInput.value++;
+  }
+  if (evt.target === amountDecrease && amountInput.value > 1) {
+    amountInput.value--;
+  }
+});
