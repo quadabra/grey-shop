@@ -59,7 +59,7 @@
         height: 0;
         transition-duration: 0.3s;
         &_active {
-          height: auto;
+          height: 100px;
         }
       }
       &-title {
@@ -78,7 +78,7 @@
       &-text {
         margin: 0;
         overflow: hidden;
-        position: relative;
+        position: absolute;
         opacity: 0;
         transition-duration: 0.3s;
         transform: translateY(-100%);
@@ -183,6 +183,23 @@
       }
       &:first-of-type {
         margin-left: auto;
+      }
+    }
+    &__amount-input-control {
+      display: inline-flex;
+      background-color: $bg-color-light-gray__transparent;
+      & > input {
+        display: block;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+        text-align: center;
+        width: 50px;
+        height: 30px;
+        line-height: 50px;
+        &::-ms-expand {
+          display: none;
+        }
       }
     }
   }
