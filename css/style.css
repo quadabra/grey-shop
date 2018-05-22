@@ -1632,7 +1632,15 @@ h4 {
         border: none;
         cursor: pointer;
         font-size: 22px;
-        width: 40px; }
+        width: 40px;
+        outline: none;
+        transition-duration: 0.1s; }
+        .product-details__amount-input-control > button:hover {
+          background-color: rgba(58, 58, 66, 0.65);
+          color: white; }
+        .product-details__amount-input-control > button:active {
+          background-color: whitesmoke;
+          color: rgba(58, 58, 66, 0.65); }
       .product-details__amount-input-control > input {
         pointer-events: none;
         display: block;
