@@ -79,13 +79,14 @@ const amount = document.querySelector(`.product-details__amount-input-control`);
 const amountIncrease = amount.querySelector(`#plus`);
 const amountDecrease = amount.querySelector(`#minus`);
 const amountInput = amount.querySelector(`input`);
-
-amount.addEventListener(`click`, (evt) => {
-  evt.preventDefault();
-  if (evt.target === amountIncrease) {
-    amountInput.value++;
-  }
-  if (evt.target === amountDecrease && amountInput.value > 1) {
-    amountInput.value--;
-  }
-});
+if (amount) {
+  amount.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    if (evt.target === amountIncrease) {
+      amountInput.value++;
+    }
+    if (evt.target === amountDecrease && amountInput.value > 1) {
+      amountInput.value--;
+    }
+  });
+}
