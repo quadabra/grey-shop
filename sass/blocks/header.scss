@@ -2,13 +2,12 @@
   .page-header {
     position: fixed;
     width: 100%;
-    height: $header-height;
+    height: $header-height_mobile;
     top: 0;
     @include flex(row, flex-start, center, nowrap);
     @include mdc-elevation(4);
     z-index: 10;
-    background-color: $bg-color-gray__transparent;
-    background-image: linear-gradient($bg-color-gray__transparent, $bg-color-light-gray__transparent);
+    background-color: $bg-color__primary;
     &__logo {
       margin: 2px auto 0 0;
       & > img {
@@ -29,13 +28,12 @@
   .page-header {
     position: fixed;
     width: 100%;
-    height: $header-height;
+    height: $header-height_mobile;
     top: 0;
     @include flex(row, flex-start, center, nowrap);
     @include mdc-elevation(4);
     z-index: 10;
-    background-color: $bg-color-gray__transparent;
-    background-image: linear-gradient($bg-color-gray__transparent, $bg-color-light-gray__transparent);
+    background-color: $bg-color__primary;
     &__logo {
       margin: 2px auto 0 0;
       & > img {
@@ -57,24 +55,22 @@
     position: fixed;
     width: 100%;
     top: 0;
-    height: $header-height;
+    height: $header-height_mobile;
     @include mdc-elevation(4);
     z-index: 10;
-    background-color: $bg-color-gray__transparent;
-    background-image: linear-gradient($bg-color-gray__transparent, $bg-color-light-gray__transparent);
+    background-color: $bg-color__primary;
     &__logo {
       & > img {
         display: block;
-        width: 225px;
-        margin-top: 25px;
-        filter: drop-shadow(2px 2px 6px rgba(44, 44, 44, 0.45));
+        width: 200px;
+        filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 0.45));
       }
     }
   }
 
   .header-navigation {
     margin: 0 auto;
-    height: $header-height;
+    height: $header-height_mobile;
     min-width: 900px;
     max-width: 1200px;
     width: 95%;
@@ -86,8 +82,7 @@
         & > img {
           display: block;
           width: 255px;
-          margin-top: 22px;
-          filter: drop-shadow(2px 2px 6px rgba(44, 44, 44, 0.45));
+          filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 0.45));
         }
       }
     }
@@ -98,16 +93,17 @@
   }
   @include media(">desktop_medium") {
     .page-header {
+      height: $header-height;
       &__logo {
         & > img {
           display: block;
           width: 275px;
-          margin-top: 23px;
-          filter: drop-shadow(2px 2px 6px rgba(44, 44, 44, 0.45));
+          filter: drop-shadow(2px 2px 6px rgba(255, 255, 255, 0.45));
         }
       }
     }
     .header-navigation {
+      height: $header-height;
       max-width: 2500px;
       width: 90%;
     }

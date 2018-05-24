@@ -32,21 +32,46 @@ $desktop__large: 2500px;
 }
 
 /* bg colors */
-$bg-color-gray__transparent: rgba(25, 25, 33, 0.85);
+
+$bg-color__primary: #141d21;
+$bg-color__secondary: darken(#3c78e8, 30%);
+$bg-color__secondary_dark: darken($bg-color__secondary, 30%);
+$bg-color__body: #ffffff;
+
+
+
 $bg-color-light-gray__transparent: rgba(58, 58, 66, 0.65);
-$bg-color-body: rgb(242, 244, 249);
+
 
 /* font colors */
-$font-color-main: #ffffff;
-$font-color-light: #212121;
-$font-color-dark: #000000;
+$font-color__primary: #ffffff;
+$font-color__secondary: #212121;
+$font-color__third: #000000;
 
+/* element colors*/
+$element-bg__static: #141d21;
+$element-bg__hover: #3c78e8;
+$element-bg__active: #ffffff;
+
+$element-text__static: #ffffff;
+$element-text__hover: #ffffff;
+$element-text__active: #ffffff;
+
+
+$action-bg__static: #ffffff;
+$action-bg__hover: #ffffff;
+$action-bg__active: #ffffff;
+
+$action-text__static: #000000;
+$action-text__hover: #000000;
+$action-text__active: #000000;
 /* borders */
 
 $border-white-transparent: 1px solid rgba(255, 255, 255, 0.3);
 
 /* sizes */
-$header-height: 50px;
+$header-height: 75px;
+$header-height_mobile: 50px;
 
 /* media query */
 $mobile-s-portrait: 420px;

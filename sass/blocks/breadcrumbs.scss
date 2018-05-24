@@ -44,7 +44,7 @@
           transform: translateY(-25%) rotate(-25deg);
           width: 10px;
           height: 10px;
-          border-right: 1px solid $bg-color-gray__transparent;
+          border-right: 1px solid $bg-color__primary;
         }
       }
       &:last-of-type {
@@ -54,7 +54,7 @@
     &__link {
       @include font(10px, 700);
       display: block;
-      color: $bg-color-gray__transparent;
+      color: $bg-color__primary;
       padding-right: 6px;
       text-transform: uppercase;
 

@@ -43,7 +43,7 @@
       margin: 3px 0;
       @include font(18px, 700);
       & > a {
-        color: $bg-color-gray__transparent;
+        color: $bg-color__primary;
         transition-duration: 0.3s;
       }
     }
@@ -51,7 +51,7 @@
       margin: 0 0 2px 0;
       @include font(16px, 400);
       & > a {
-        color: $bg-color-gray__transparent;
+        color: $bg-color__primary;
         transition-duration: 0.3s;
       }
     }
@@ -132,7 +132,7 @@
       margin: 3px 0;
       @include font(18px, 700);
       & > a {
-        color: $bg-color-gray__transparent;
+        color: $bg-color__primary;
         transition-duration: 0.3s;
       }
     }
@@ -140,7 +140,7 @@
       margin: 0 0 2px 0;
       @include font(16px, 400);
       & > a {
-        color: $bg-color-gray__transparent;
+        color: $bg-color__primary;
         transition-duration: 0.3s;
       }
     }
@@ -244,7 +244,7 @@
       margin: 3px 0;
       @include font(18px, 700);
       & > a {
-        color: $bg-color-gray__transparent;
+        color: $bg-color__primary;
         transition-duration: 0.3s;
         &:hover {
           color: #00b0ff;
@@ -255,7 +255,7 @@
       margin: 0 0 2px 0;
       @include font(16px, 400);
       & > a {
-        color: $bg-color-gray__transparent;
+        color: $bg-color__primary;
         transition-duration: 0.3s;
         &:hover {
           color: #00b0ff;

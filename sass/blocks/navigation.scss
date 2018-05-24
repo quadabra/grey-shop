@@ -7,7 +7,7 @@
     top: 100%;
     left: 0;
     padding: 10px 0;
-    background-color: $bg-color-gray__transparent;
+    background-color: $bg-color__primary;
     @include flex(column, flex-start, center, no-wrap);
     @include mdc-elevation(2);
     overflow: scroll;
@@ -18,11 +18,11 @@
       @include font(16px, 900);
       @include link(
           20px,
-          50px,
+          $header-height_mobile,
           uppercase,
           2px,
-          $font-color-main,
-          $font-color-main);
+          $font-color__primary,
+          $font-color__primary);
       &_expand::after {
         content: "";
         display: inline-block;
@@ -30,8 +30,8 @@
         width: 6px;
         height: 6px;
         transform: translateY(-20%) rotate(-45deg);
-        border-bottom: 2px solid $font-color-main;
-        border-right: 2px solid $font-color-main;
+        border-bottom: 2px solid $font-color__primary;
+        border-right: 2px solid $font-color__primary;
 
       }
     }
@@ -53,11 +53,11 @@
       @include font(14px, 700);
       @include link(
           20px,
-          50px,
+          $header-height_mobile,
           uppercase,
           2px,
-          $font-color-main,
-          $font-color-main);
+          $font-color__primary,
+          $font-color__primary);
       @include flex(row, flex-start, center, no-wrap);
     }
   }
@@ -78,7 +78,6 @@
     top: 100%;
     left: 0;
     padding: 10px 0;
-    background-color: $bg-color-gray__transparent;
     @include flex(column, flex-start, center, no-wrap);
     @include mdc-elevation(2);
     overflow: scroll;
@@ -89,11 +88,11 @@
       @include font(16px, 900);
       @include link(
           20px,
-          50px,
+          $header-height_mobile,
           uppercase,
           2px,
-          $font-color-main,
-          $font-color-main);
+          $font-color__primary,
+          $font-color__primary);
       &_expand::after {
         content: "";
         display: inline-block;
@@ -101,8 +100,8 @@
         width: 6px;
         height: 6px;
         transform: translateY(-20%) rotate(-45deg);
-        border-bottom: 2px solid $font-color-main;
-        border-right: 2px solid $font-color-main;
+        border-bottom: 2px solid $font-color__primary;
+        border-right: 2px solid $font-color__primary;
       }
     }
   }
@@ -123,11 +122,11 @@
       @include font(14px, 700);
       @include link(
           20px,
-          50px,
+          $header-height_mobile,
           uppercase,
           2px,
-          $font-color-main,
-          $font-color-main);
+          $font-color__primary,
+          $font-color__primary);
       @include flex(row, flex-start, center, no-wrap);
     }
   }
@@ -147,11 +146,11 @@
       @include font(12px, 700);
       @include link(
           7px,
-          50px,
+          $header-height_mobile,
           uppercase,
           2px,
-          $font-color-main,
-          $font-color-main
+          $font-color__primary,
+          $font-color__primary
       );
       &_expand::after {
         content: "";
@@ -160,8 +159,8 @@
         height: 5px;
         margin-left: 5px;
         transform: translateY(-50%) rotate(45deg);
-        border-bottom: 2px solid $font-color-main;
-        border-right: 2px solid $font-color-main;
+        border-bottom: 2px solid $font-color__primary;
+        border-right: 2px solid $font-color__primary;
         opacity: 0.5;
       }
     }
@@ -185,9 +184,9 @@
           6px,
           50px,
           uppercase,
-          2px,
-          $font-color-main,
-          $font-color-main
+          4px,
+          $font-color__primary,
+          $font-color__primary
       );
       @include flex(row, space-around, center, nowrap);
       & > img {
@@ -202,11 +201,11 @@
         @include font(14px, 700);
         @include link(
             10px,
-            50px,
+            $header-height,
             uppercase,
-            2px,
-            $font-color-main,
-            $font-color-main
+            6px,
+            $font-color__primary,
+            $font-color__primary
         );
       }
     }
@@ -224,11 +223,11 @@
         @include font(16px, 900);
         @include link(
             20px,
-            50px,
+            $header-height,
             uppercase,
-            2px,
-            $font-color-main,
-            $font-color-main
+            8px,
+            $font-color__primary,
+            $font-color__primary
         );
       }
     }

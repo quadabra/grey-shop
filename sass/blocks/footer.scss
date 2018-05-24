@@ -2,8 +2,7 @@
   .page-footer {
     padding-top: 30px;
     color: white;
-    background-color: $bg-color-gray__transparent;
-    background-image: linear-gradient($bg-color-light-gray__transparent, $bg-color-gray__transparent);
+    background-color: $bg-color__primary;
     &__container {
       @include grid-container(
           6,
@@ -42,8 +41,7 @@
   .page-footer {
     padding-top: 30px;
     color: white;
-    background-color: $bg-color-gray__transparent;
-    background-image: linear-gradient($bg-color-light-gray__transparent, $bg-color-gray__transparent);
+    background-color: $bg-color__primary;
     &__container {
       @include grid-container(
           6,

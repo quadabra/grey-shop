@@ -14,7 +14,7 @@
     padding: 0;
     flex-direction: column;
     width: 100%;
-    background-color: $bg-color-gray__transparent;
+    background-color: $bg-color__secondary;
     &__card {
       padding: 10px;
       &:not(:last-child) {
@@ -22,7 +22,7 @@
       }
     }
     &__container {
-      @include flex(row, flex-start, center, no-wrap);
+      @include flex(row, flex-start, center, nowrap);
       justify-content: space-between;
       width: 95%;
       margin: 0 auto;
@@ -41,7 +41,7 @@
     &__title {
       margin: 0;
       padding: 15px 0;
-      @include flex(row, flex-start, center, no-wrap);
+      @include flex(row, flex-start, center, nowrap);
       justify-content: space-around;
     }
     &__link {
@@ -76,7 +76,7 @@
     padding: 0;
     flex-direction: column;
     width: 100%;
-    background-color: $bg-color-gray__transparent;
+    background-color: $bg-color__secondary;
     &__card {
       padding: 10px;
       &:not(:last-child) {
@@ -84,7 +84,7 @@
       }
     }
     &__container {
-      @include flex(row, flex-start, center, no-wrap);
+      @include flex(row, flex-start, center, nowrap);
       justify-content: space-between;
       width: 95%;
       margin: 0 auto;
@@ -103,7 +103,7 @@
     &__title {
       margin: 0;
       padding: 15px 0;
-      @include flex(row, flex-start, center, no-wrap);
+      @include flex(row, flex-start, center, nowrap);
       justify-content: space-around;
     }
     &__link {
@@ -127,11 +127,11 @@
     width: 100%;
     height: 0;
     position: fixed;
-    top: 50px;
+    top: $header-height_mobile;
     left: 0;
     z-index: 2;
     @include mdc-elevation(2);
-    background-color: $bg-color-gray__transparent;
+    background-color: $bg-color__body;
     overflow: hidden;
     transition-duration: 0.3s;
     &__section {
@@ -152,7 +152,7 @@
       }
     }
     &__container {
-      @include flex(row, flex-start, center, no-wrap);
+      @include flex(row, flex-start, center, nowrap);
       width: 100%;
       margin: 30px auto 0 auto;
     }
@@ -172,15 +172,22 @@
     }
     &__title {
       margin: 15px 0;
-      @include flex(row, flex-start, center, no-wrap);
+      @include flex(row, flex-start, center, nowrap);
       @include font(16px, 700);
       justify-content: space-around;
-      @include link(0, 50px, uppercase, 2px, $font-color-main, #cccccc);
+      @include link(0, 50px, uppercase, 2px, $font-color__primary, #cccccc);
       text-align: center;
+      color: $font-color__secondary;
     }
     &__link {
-      @include link(30px, 35px, uppercase, 2px, $font-color-main, #cccccc);
+      @include link(30px, 35px, uppercase, 2px, $font-color__primary, #cccccc);
       @include font(14px, 700);
+      color: $font-color__secondary;
+    }
+  }
+  @include media(">desktop_small") {
+    .menu-contents {
+      top: $header-height;
     }
   }
 }

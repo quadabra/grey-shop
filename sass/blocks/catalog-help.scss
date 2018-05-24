@@ -13,7 +13,7 @@
     &__title {
       margin: 0;
       padding: 15px;
-      background-color: $bg-color-gray__transparent;
+      background-color: $bg-color__primary;
       @include font(16px, 700);
       color: white;
     }
@@ -57,7 +57,7 @@
     &__title {
       margin: 0;
       padding: 15px;
-      background-color: $bg-color-gray__transparent;
+      background-color: $bg-color__primary;
       @include font(16px, 700);
       color: white;
     }
@@ -74,7 +74,7 @@
       transform: rotate(90deg);
       z-index: 1;
       overflow: hidden;
-      background-color: $bg-color-body;
+      background-color: $bg-color__body;
       &_closed {
         transform: rotate(-90deg);
       }

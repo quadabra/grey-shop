@@ -31,7 +31,7 @@ function menuAllClose(callback) {
     menuAllClose(() => menuOpen(evt.target));
   });
   it.addEventListener(`mouseleave`, function (evt) {
-    setTimeout(() => menuHide(evt.target), 1000);
+    setTimeout(() => menuHide(evt.target), 300);
   });
 });
 
