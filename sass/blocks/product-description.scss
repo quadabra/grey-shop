@@ -7,7 +7,5 @@
 }
 
 @include media(">tablet_large") {
-  .product {
-    @include flex(row, flex-start, flex-start, nowrap);
-  }
+
 }

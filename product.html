@@ -463,126 +463,74 @@
 </div>
 <main>
   <div class="container">
-    <h1 class="product-title">product title</h1>
-  </div>
-  <div class="container">
-    <article class="product-details">
-      <div class="product-details__images-block">
-        <img class="product-details__image-main" src="img/test.jpg" alt="">
-        <ul class="product-details__images-optional">
-          <li>
-            <img src="#" alt="">
-          </li>
-          <li>
-            <img src="#" alt="">
-          </li>
-          <li>
-            <img src="#" alt="">
-          </li>
-        </ul>
-      </div>
-      <section class="product-details__description">
-        <p class="product-details__description-brand">
-          VoEn
-        </p>
-        <h2 class="product-details__description-name">
-          Super Shmotka
-        </h2>
-        <div class="product-details__rating">
-
-        </div>
-        <ul class="product-details__options">
-          <li class="product-details__options-info">
-            <h3 class="product-details__options-title">
-              Description
-              <span class="product-details__options-extend"></span>
-            </h3>
-            <div class="product-details__options-container">
-              <p class="product-details__options-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </li>
-          <li class="product-details__options-info">
-            <h3 class="product-details__options-title">
-              Size
-              <span class="product-details__options-extend"></span>
-            </h3>
-            <div class="product-details__options-container">
-              <p class="product-details__options-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </li>
-          <li class="product-details__options-info">
-            <h3 class="product-details__options-title">
-              Delivery
-              <span class="product-details__options-extend"></span>
-            </h3>
-            <div class="product-details__options-container">
-              <p class="product-details__options-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </li>
-        </ul>
-        <p class="product-details__price">price: <span>100$</span></p>
-        <form class="product-details__buy-form" action="#">
-          <ul class="product-details__buy-options">
-            <li class="product-details__color-selector">
-              <p>Select Color:</p>
-              <label class="product-details__color-option">
-                <img src="#" alt="">
-                <input class="visually-hidden" type="radio" name="product-color" value="color1">
-                <span></span>
-              </label>
-              <label class="product-details__color-option">
-                <img src="#" alt="">
-                <input class="visually-hidden" type="radio" name="product-color" value="color2">
-                <span></span>
-              </label>
-              <label class="product-details__color-option">
-                <img src="#" alt="">
-                <input class="visually-hidden" type="radio" name="product-color" value="color3">
-                <span></span>
-              </label>
-              <label class="product-details__color-option">
-                <img src="#" alt="">
-                <input class="visually-hidden" type="radio" name="product-color" value="color4">
-                <span></span>
-              </label>
+    <article class="product">
+      <section class="product-description">
+        <div class="product-description__images product-images">
+          <div class="product-images__main">
+            <img src="img/test.jpg" alt="">
+          </div>
+          <ul class="product-images__list">
+            <li class="product-images__list-item">
+              <img src="" alt="">
             </li>
-            <li class="product-details__size-selector">
-              <p>Select Size:</p>
-              <label class="product-details__size-option">
-                <input class="visually-hidden" type="radio" name="product-size" value="s">
-                <span>S</span>
-              </label>
-              <label class="product-details__size-option">
-                <input class="visually-hidden" type="radio" name="product-size" value="m">
-                <span>M</span>
-              </label>
-              <label class="product-details__size-option">
-                <input class="visually-hidden" type="radio" name="product-size" value="l">
-                <span>L</span>
-              </label>
-              <label class="product-details__size-option">
-                <input class="visually-hidden" type="radio" name="product-size" value="xl">
-                <span>XL</span>
-              </label>
+            <li class="product-images__list-item">
+              <img src="" alt="">
+            </li>
+            <li class="product-images__list-item">
+              <img src="" alt="">
+            </li>
+            <li class="product-images__list-item">
+              <img src="" alt="">
             </li>
           </ul>
-          <label for="amount">Quantity:</label>
-          <div class="product-details__amount-input-control">
-            <button id="minus">-</button>
-            <input type="number" id="amount" min="1" value="1">
-            <button id="plus">+</button>
-          </div>
-          <button class="action-button" type="submit">Add to cart</button>
-        </form>
+        </div>
+        <div class="product-description__info product-info">
+          <article class="product-info__description">
+            <h3>Product_name details</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque ex quis accumsan vehicula. Curabitur porttitor rhoncus interdum. Vestibulum
+              fringilla sodales leo ac hendrerit. Suspendisse quis lorem tristique, maximus tellus sed, tempus ex. Donec fermentum tortor vel urna iaculis interdum sed ac
+              erat. Sed dapibus urna ut leo aliquet, eget gravida enim suscipit. Nulla facilisi. In ornare urna vel maximus viverra.
+            </p>
+            <p>
+              In ac arcu est. Nullam sed varius tellus. Aliquam tempor dui nec tellus suscipit aliquam. Cras vitae pharetra felis. Vestibulum posuere nec nisl vel mollis. Sed
+              ultrices quis magna eget pulvinar. Maecenas placerat est vehicula leo luctus, sit amet congue sapien feugiat. Praesent turpis enim, euismod at nisi ut, hendrerit
+              aliquam velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Etiam efficitur
+              interdum ligula, sed aliquam lectus lacinia id.
+            </p>
+          </article>
+          <article class="product-info__features">
+            <h4>Featured details</h4>
+            <ul class="product-info__features-list">
+              <li>
+                <p>some feature</p>
+              </li>
+              <li>
+                <p>some feature</p>
+              </li>
+              <li>
+                <p>some feature</p>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="product-description__manufacturer product-manufacture">
+          <h4>Manufacturer name</h4>
+          <img src="#" alt="manufacturer logo">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque ex quis accumsan vehicula. Curabitur porttitor rhoncus interdum. Vestibulum
+            fringilla sodales leo ac hendrerit. Suspendisse quis lorem tristique, maximus tellus sed, tempus ex. Donec fermentum tortor vel urna iaculis interdum sed ac
+            erat. Sed dapibus urna ut leo aliquet, eget gravida enim suscipit. Nulla facilisi. In ornare urna vel maximus viverra.
+          </p>
+          <ul class="product-maufacturer__gallery">
+            <li>
+              <img src="#" alt="">
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="product-configuration">
+
       </section>
     </article>
   </div>
