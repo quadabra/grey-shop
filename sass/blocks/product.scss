@@ -8,6 +8,22 @@
 
 @include media(">tablet_large") {
   .product {
-    @include flex(row, flex-start, flex-start, nowrap);
+    position: relative;
+    &-configuration {
+      position: fixed;
+
+      left: 70%;
+      width: 30%;
+      height: 80vh;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    &-description {
+      width: 60%;
+    }
   }
 }

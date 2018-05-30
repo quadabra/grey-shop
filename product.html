@@ -468,26 +468,26 @@
         <div class="product-configuration__info">
           <h1>Product Name</h1>
           <p><span>by</span>&nbsp;manufacturer name</p>
-          <div class="">
+          <div class="product-configuration__price">
             <p><span>USD</span><span>100500$</span></p>
             <p>Reviews <span>*****</span></p>
           </div>
-          <ul>
-            <li>
-              <h2>Description</h2>
-              <p>
+          <ul class="product-configuration__info-short">
+            <li class="product-configuration__info-short-item">
+              <h2 class="product-configuration__info-short-title">Description</h2>
+              <p class="product-configuration__info-short-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque ex quis accumsan vehicula. Curabitur porttitor rhoncus interdum. Vestibulum
                 fringilla sodales leo ac hendrerit.
               </p>
             </li>
-            <li>
-              <h2>Size info</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque ex quis accumsan vehicula. Curabitur porttitor rhoncus interdum. Vestibulum
+            <li class="product-configuration__info-short-item">
+              <h2 class="product-configuration__info-short-title">Size info</h2>
+              <p class="product-configuration__info-short-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque ex quis accumsan vehicula. Curabitur porttitor rhoncus interdum. Vestibulum
                 fringilla sodales leo ac hendrerit.</p>
             </li>
-            <li>
-              <h2>Delivery info</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque ex quis accumsan vehicula. Curabitur porttitor rhoncus interdum. Vestibulum
+            <li class="product-configuration__info-short-item">
+              <h2 class="product-configuration__info-short-title">Delivery info</h2>
+              <p class="product-configuration__info-short-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque ex quis accumsan vehicula. Curabitur porttitor rhoncus interdum. Vestibulum
                 fringilla sodales leo ac hendrerit.</p>
             </li>
           </ul>
@@ -496,7 +496,7 @@
           <h2>Available options</h2>
           <div class="config-form__color">
             <p>Select Color:</p>
-            <ul>
+            <ul class="config-form__color-options">
               <li>
                 <label class="config-form__color-option">
                   <img src="#" alt="">
@@ -529,7 +529,7 @@
           </div>
           <div class="config-form__size">
             <div>
-              <p>Select Size:&nbsp;</p>
+              <p>Select size type:&nbsp;</p>
               <ul class="config-form__size-types">
                 <li>
                   <a href="#">US Size</a>
@@ -549,11 +549,65 @@
               </ul>
             </div>
             <div>
-              <ul>
-
+              <p>Select Size:</p>
+              <ul class="config-form__size-options">
+                <li>
+                  <label class="config-form__text-option">
+                    <input class="visually-hidden" type="radio" name="product-size" value="s">
+                    <span>S</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="config-form__text-option">
+                    <input class="visually-hidden" type="radio" name="product-size" value="m">
+                    <span>M</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="config-form__text-option">
+                    <input class="visually-hidden" type="radio" name="product-size" value="l">
+                    <span>L</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="config-form__text-option">
+                    <input class="visually-hidden" type="radio" name="product-size" value="xl">
+                    <span>XL</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p>Select Height:</p>
+              <ul class="config-form__size-options">
+                <li>
+                  <label class="config-form__text-option">
+                    <input class="visually-hidden" type="radio" name="product-size_optional" value="s">
+                    <span>S</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="config-form__text-option">
+                    <input class="visually-hidden" type="radio" name="product-size_optional" value="m">
+                    <span>M</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="config-form__text-option">
+                    <input class="visually-hidden" type="radio" name="product-size_optional" value="l">
+                    <span>L</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="config-form__text-option">
+                    <input class="visually-hidden" type="radio" name="product-size_optional" value="xl">
+                    <span>XL</span>
+                  </label>
+                </li>
               </ul>
             </div>
           </div>
+          <button class="action-button" type="submit">Add to Cart</button>
         </form>
       </section>
       <section class="product-description">
