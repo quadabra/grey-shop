@@ -10,10 +10,10 @@
   .product {
     position: relative;
     &-configuration {
-      position: fixed;
+      position: absolute;
 
-      left: 70%;
-      width: 30%;
+      right: 0;
+      width: 35%;
       height: 80vh;
       overflow: scroll;
       -ms-overflow-style: none;
@@ -23,7 +23,7 @@
       }
     }
     &-description {
-      width: 60%;
+      width: 66%;
     }
   }
 }

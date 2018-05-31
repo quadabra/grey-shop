@@ -29,13 +29,13 @@
         margin: 5px;
         width: 15px;
         height: 15px;
-        border: 2px solid $bg-color-light-gray__transparent;
+        border: 2px solid $color__decoration;
         border-radius: 50%;
         background-color: transparent;
         opacity: 0.75;
         &:hover,
         &:focus {
-          background-color: $bg-color-light-gray__transparent;
+          background-color: $color__decoration;
         }
       }
     }

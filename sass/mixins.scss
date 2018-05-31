@@ -191,7 +191,7 @@
   &:hover,
   &:focus {
     border: $width solid $border-color;
-    background-color: $bg-color-light-gray__transparent;
+    background-color: $color__decoration;
     &::before {
       border-color: #ffffff;
     }

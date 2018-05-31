@@ -134,7 +134,7 @@
         display: block;
         width: 100%;
         line-height: 35px;
-        border: 1px solid $bg-color-light-gray__transparent;
+        border: 1px solid $color__decoration;
         background-color: transparent;
         @include font(14px, 400);
       }
@@ -145,7 +145,7 @@
         height: 180px;
         line-height: 25px;
         resize: none;
-        border: 1px solid $bg-color-light-gray__transparent;
+        border: 1px solid $color__decoration;
         background-color: transparent;
         margin-bottom: 20px;
       }
