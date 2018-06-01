@@ -12,8 +12,42 @@
       @include font(16px, 700);
       color: $element-text__static;
     }
+    &__texts {
+      @include font(14px, 400);
+      color: $element-text__static;
+    }
     &__text {
-
+      &-options {
+        @include flex(row, flex-start, flex-start, wrap);
+        & > li {
+          margin: 5px 0 0 5px;
+        }
+      }
+      &-option {
+        position: relative;
+        display: block;
+        width: 75px;
+        height: 75px;
+        background-color: $color__decoration;
+        transition-duration: 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
+        & > span {
+          @include font(30px, 700);
+          line-height: 75px;
+          text-align: center;
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+        & > input:checked ~ span {
+          border: 1px solid $element-text__static;
+        }
+      }
     }
     &__color {
       &-options {
@@ -58,10 +92,16 @@
         }
       }
       &-link {
+        @include font(14px, 400);
         display: block;
         padding: 0 5px;
         color: $element-text__static;
         border: 1px solid $color__decoration;
+      }
+      &-container {
+        &_types {
+          @include flex(row, flex-start, center, nowrap);
+        }
       }
     }
   }
