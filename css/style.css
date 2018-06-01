@@ -1046,15 +1046,22 @@ h4 {
         max-width: 100px;
         float: left; }
   .product-configuration__title {
+    margin: 0;
     border-bottom: 5px solid #0f357c;
     font-size: 32px;
     font-weight: 700; }
+  .product-configuration__text {
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.5; }
   .product-configuration__price {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; }
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #9e9ea6; }
   .product-configuration__info-short-item {
     border-bottom: 1px solid #9e9ea6;
     transition-duration: 0.2s; }
