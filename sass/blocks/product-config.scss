@@ -9,11 +9,18 @@
 @include media(">tablet_large") {
   .product-configuration {
     &__title {
+      margin: 0;
       border-bottom: 5px solid $bg-color__secondary;
       @include font(32px, 700);
     }
+    &__text {
+      margin: 5px 0;
+      @include font(12px, 400);
+      opacity: 0.5;
+    }
     &__price {
       @include flex(row, space-between, center, nowrap);
+      border-bottom: 1px solid $color__decoration;
     }
     &__info-short {
       &-item {
