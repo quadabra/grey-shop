@@ -1,0 +1,68 @@
+@include media("screen", "<mobile_large") {
+
+}
+
+@include media("screen", ">mobile_large", "<tablet_large") {
+
+}
+
+@include media(">tablet_large") {
+  .config-form {
+    &__title {
+      @include font(16px, 700);
+      color: $element-text__static;
+    }
+    &__text {
+
+    }
+    &__color {
+      &-options {
+        @include flex(row, flex-start, flex-start, wrap);
+        & > li {
+          margin: 5px 0 0 5px;
+        }
+      }
+      &-option {
+        position: relative;
+        display: block;
+        width: 75px;
+        height: 75px;
+        background-color: $color__decoration;
+        transition-duration: 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
+        & > img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+        & > span {
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+        & > input:checked ~ span {
+          border: 1px solid $element-text__static;
+        }
+      }
+    }
+    &__size {
+      &-types {
+        @include flex(row, flex-start, center, nowrap);
+        & > li {
+          margin-left: 5px;
+        }
+      }
+      &-link {
+        display: block;
+        padding: 0 5px;
+        color: $element-text__static;
+        border: 1px solid $color__decoration;
+      }
+    }
+  }
+}

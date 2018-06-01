@@ -466,8 +466,8 @@
     <article class="product">
       <section class="product-configuration">
         <div class="product-configuration__info">
-          <h1>Product Name</h1>
-          <p><span>by</span>&nbsp;manufacturer name</p>
+          <h1 class="product-configuration__title">Product Name</h1>
+          <p><span>by&nbsp;</span>manufacturer name</p>
           <div class="product-configuration__price">
             <p><span>USD</span><span>100500$</span></p>
             <p>Reviews <span>*****</span></p>
@@ -493,10 +493,66 @@
           </ul>
         </div>
         <form class="product-configuration__form config-form" action="#">
-          <h2>Available options</h2>
+          <h3 class="config-form__title">Available options</h3>
           <div class="config-form__color">
             <p>Select Color:</p>
             <ul class="config-form__color-options">
+              <li>
+                <label class="config-form__color-option">
+                  <img src="#" alt="">
+                  <input class="visually-hidden" type="radio" name="product-color" value="color1">
+                  <span></span>
+                </label>
+              </li>
+              <li>
+                <label class="config-form__color-option">
+                  <img src="#" alt="">
+                  <input class="visually-hidden" type="radio" name="product-color" value="color2">
+                  <span></span>
+                </label>
+              </li>
+              <li>
+                <label class="config-form__color-option">
+                  <img src="#" alt="">
+                  <input class="visually-hidden" type="radio" name="product-color" value="color3">
+                  <span></span>
+                </label>
+              </li>
+              <li>
+                <label class="config-form__color-option">
+                  <img src="#" alt="">
+                  <input class="visually-hidden" type="radio" name="product-color" value="color4">
+                  <span></span>
+                </label>
+              </li>
+              <li>
+                <label class="config-form__color-option">
+                  <img src="#" alt="">
+                  <input class="visually-hidden" type="radio" name="product-color" value="color1">
+                  <span></span>
+                </label>
+              </li>
+              <li>
+                <label class="config-form__color-option">
+                  <img src="#" alt="">
+                  <input class="visually-hidden" type="radio" name="product-color" value="color2">
+                  <span></span>
+                </label>
+              </li>
+              <li>
+                <label class="config-form__color-option">
+                  <img src="#" alt="">
+                  <input class="visually-hidden" type="radio" name="product-color" value="color3">
+                  <span></span>
+                </label>
+              </li>
+              <li>
+                <label class="config-form__color-option">
+                  <img src="#" alt="">
+                  <input class="visually-hidden" type="radio" name="product-color" value="color4">
+                  <span></span>
+                </label>
+              </li>
               <li>
                 <label class="config-form__color-option">
                   <img src="#" alt="">
@@ -532,19 +588,19 @@
               <p>Select size type:&nbsp;</p>
               <ul class="config-form__size-types">
                 <li>
-                  <a href="#">US Size</a>
+                  <a class="config-form__size-link" href="#">US Size</a>
                 </li>
                 <li>
-                  <a href="#">International Size</a>
+                  <a class="config-form__size-link" href="#">International Size</a>
                 </li>
                 <li>
-                  <a href="#">RU Size</a>
+                  <a class="config-form__size-link" href="#">RU Size</a>
                 </li>
                 <li>
-                  <a href="#">Inches</a>
+                  <a class="config-form__size-link" href="#">Inches</a>
                 </li>
                 <li>
-                  <a href="#">Centimeters</a>
+                  <a class="config-form__size-link" href="#">Centimeters</a>
                 </li>
               </ul>
             </div>
@@ -662,20 +718,23 @@
               </li>
             </ul>
           </article>
-        </div>
-        <div class="product-description__manufacturer product-manufacture">
-          <h4>Manufacturer name</h4>
-          <img src="#" alt="manufacturer logo">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque ex quis accumsan vehicula. Curabitur porttitor rhoncus interdum. Vestibulum
-            fringilla sodales leo ac hendrerit. Suspendisse quis lorem tristique, maximus tellus sed, tempus ex. Donec fermentum tortor vel urna iaculis interdum sed ac
-            erat. Sed dapibus urna ut leo aliquet, eget gravida enim suscipit. Nulla facilisi. In ornare urna vel maximus viverra.
-          </p>
-          <ul class="product-maufacturer__gallery">
-            <li>
-              <img src="#" alt="">
-            </li>
-          </ul>
+          <article class="product-info__manufacturer">
+            <h3  class="product-info__title">Manufacturer name</h3>
+            <img class="product-info__manufacturer-logo" src="img/test4.jpeg" alt="manufacturer logo">
+            <p class="product-info__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque ex quis accumsan vehicula. Curabitur porttitor rhoncus interdum. Vestibulum
+              fringilla sodales leo ac hendrerit. Suspendisse quis lorem tristique, maximus tellus sed, tempus ex. Donec fermentum tortor vel urna iaculis interdum sed ac
+              erat. Sed dapibus urna ut leo aliquet, eget gravida enim suscipit. Nulla facilisi. In ornare urna vel maximus viverra.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque ex quis accumsan vehicula. Curabitur porttitor rhoncus interdum. Vestibulum
+              fringilla sodales leo ac hendrerit. Suspendisse quis lorem tristique, maximus tellus sed, tempus ex. Donec fermentum tortor vel urna iaculis interdum sed ac
+              erat. Sed dapibus urna ut leo aliquet, eget gravida enim suscipit. Nulla facilisi. In ornare urna vel maximus viverra.
+            </p>
+            <ul class="product-info__manufacturer-gallery">
+              <li>
+                <img src="#" alt="">
+              </li>
+            </ul>
+          </article>
         </div>
       </section>
     </article>

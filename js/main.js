@@ -59,19 +59,15 @@ if (helpHide) {
   });
 }
 
-let ul11 = document.querySelector(`.product-details__options`);
-let container = ul11.querySelectorAll(`.product-details__options-container`);
-let productInfoTitles = ul11.querySelectorAll(`.product-details__options-info`);
-let productInfoText = ul11.querySelectorAll(`.product-details__options-text`);
-let productInfoExtend = ul11.querySelectorAll(`.product-details__options-extend`);
+let productShortInfo = document.querySelector(`.product-configuration__info-short`);
+let productInfoTitles = productShortInfo.querySelectorAll(`.product-configuration__info-short-title`);
+let productInfoText = productShortInfo.querySelectorAll(`.product-configuration__info-short-text`);
 
 [].forEach.call(productInfoTitles, (it, i) => {
-  it.classList.add(`zz`);
   it.addEventListener(`click`, (evt) => {
     evt.preventDefault();
-    productInfoText[i].classList.toggle(`product-details__options-text_active`);
-    productInfoExtend[i].classList.toggle(`product-details__options-extend_active`);
-    container[i].classList.toggle(`product-details__options-container_active`);
+    productInfoText[i].classList.toggle(`product-configuration__info-short-text_visible`);
+
   });
 });
 

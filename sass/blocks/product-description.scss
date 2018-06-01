@@ -11,7 +11,7 @@
     &-images {
       @include flex(row, flex-start, flex-start, nowrap);
       &__main {
-        width: 70%;
+        width: 65%;
         & > img {
           display: block;
           width: 100%;
@@ -44,7 +44,8 @@
       }
     }
     &-info {
-      @include flex(row, flex-start, flex-start, nowrap);
+      margin-top: 100px;
+      @include flex(row, flex-start, flex-start, wrap);
       &__title {
         margin: 15px 0;
       }
@@ -52,11 +53,11 @@
         margin: 10px 15px;
       }
       &__description {
-        width: 70%;
+        width: 60%;
         border-right: 1px solid $color__decoration;
       }
       &__features {
-        width: 30%;
+        width: 40%;
         margin-left: -1px;
         padding-left: 20px;
         border-left: 1px solid $color__decoration;
@@ -78,9 +79,13 @@
           }
         }
       }
-    }
-    &-manufacture {
-      border-top: 1px solid $color__decoration;
+      &__manufacturer {
+        border-top: 1px solid $color__decoration;
+        &-logo {
+          max-width: 100px;
+          float: left;
+        }
+      }
     }
   }
 }
